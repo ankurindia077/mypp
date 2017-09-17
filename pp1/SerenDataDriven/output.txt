@@ -1,0 +1,489 @@
+[INFO] Scanning for projects...
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building DEFT UI Acceptance Tests 1.0-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[WARNING] The artifact jdom:jdom:jar:1.1 has been relocated to org.jdom:jdom:jar:1.1
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ ui-acceptance-test ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory C:\Users\ac837232\Documents\ExpressYard\ff\BDDSerenWithScreenShot\src\main\resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.3:compile (default-compile) @ ui-acceptance-test ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ ui-acceptance-test ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 11 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.3:testCompile (default-testCompile) @ ui-acceptance-test ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.18.1:test (default-test) @ ui-acceptance-test ---
+[INFO] 
+[INFO] --- maven-jar-plugin:2.4:jar (default-jar) @ ui-acceptance-test ---
+[WARNING] JAR will be empty - no content was marked for inclusion!
+[INFO] 
+[INFO] --- maven-failsafe-plugin:2.19:integration-test (default) @ ui-acceptance-test ---
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running com.serenity.demo.SerenityBDDSearch
+Iteration Number 3
+System porpertyC:\Users\ac837232\Documents\ExpressYard\ff\BDDSerenWithScreenShot
+Total rows - 5
+Test Starts from row Number - 1
+Total rows of data are - 3
+capabilityRunmode true
+featureRunmode true
+sceanrioRunmode true
+dataRunmode true
+Total rows - 5
+Test Starts from row Number - 1
+Total rows of data are - 3
+####################################################
+Search Text is   3ge india
+Search result is 3a1
+####################################################
+####################################################
+Search Text is  inside 2nd statement ge india
+####################################################
+####################################################
+Search Result is  inside 3rd statement a1
+####################################################
+Iteration Number 3
+Total rows - 5
+Test Starts from row Number - 1
+Total rows of data are - 3
+capabilityRunmode true
+featureRunmode true
+sceanrioRunmode true
+dataRunmode true
+Total rows - 5
+Test Starts from row Number - 1
+Total rows of data are - 3
+####################################################
+Search Text is   3ge india
+Search result is 3a1
+####################################################
+####################################################
+Search Text is  inside 2nd statement ge india
+####################################################
+####################################################
+Search Text is  inside 2nd statement ge india
+####################################################
+Usage of but with then
+####################################################
+Search Result is  inside 3rd statement a1
+####################################################
+Iteration Number 3
+Total rows - 5
+Test Starts from row Number - 1
+Total rows of data are - 3
+capabilityRunmode true
+featureRunmode true
+sceanrioRunmode true
+dataRunmode true
+Total rows - 5
+Test Starts from row Number - 1
+Total rows of data are - 3
+####################################################
+Search Text is   3ge india
+Search result is 3a1
+####################################################
+####################################################
+Search Text is  inside 2nd statement ge india
+####################################################
+Iteration Number 1
+Total rows - 5
+Test Starts from row Number - 1
+Total rows of data are - 3
+capabilityRunmode true
+featureRunmode true
+sceanrioRunmode true
+dataRunmode true
+Total rows - 5
+Test Starts from row Number - 1
+Total rows of data are - 3
+####################################################
+Search Text is   1serenity bdd
+Search result is 1a3
+####################################################
+####################################################
+Search Text is  inside 2nd statement serenity bdd
+####################################################
+####################################################
+Search Result is  inside 3rd statement a3
+####################################################
+Iteration Number 3
+Total rows - 5
+Test Starts from row Number - 1
+Total rows of data are - 3
+capabilityRunmode true
+featureRunmode true
+sceanrioRunmode true
+dataRunmode true
+Total rows - 5
+Test Starts from row Number - 1
+Total rows of data are - 3
+####################################################
+Search Text is   3ge india
+Search result is 3a1
+####################################################
+####################################################
+Search Text is  inside 2nd statement ge india
+####################################################
+Iteration Number 2
+Total rows - 5
+Test Starts from row Number - 1
+Total rows of data are - 3
+capabilityRunmode true
+featureRunmode true
+sceanrioRunmode true
+dataRunmode false
+Skipping
+Iteration Number 3
+Total rows - 5
+Test Starts from row Number - 1
+Total rows of data are - 3
+capabilityRunmode true
+featureRunmode true
+sceanrioRunmode true
+dataRunmode true
+Total rows - 5
+Test Starts from row Number - 1
+Total rows of data are - 3
+####################################################
+Search Text is   3ge india
+Search result is 3a1
+####################################################
+####################################################
+Search Text is  inside 2nd statement ge india
+####################################################
+Iteration Number 3
+Total rows - 5
+Test Starts from row Number - 1
+Total rows of data are - 3
+capabilityRunmode true
+featureRunmode true
+sceanrioRunmode true
+dataRunmode true
+Total rows - 5
+Test Starts from row Number - 1
+Total rows of data are - 3
+####################################################
+Search Text is   3ge india
+Search result is 3a1
+####################################################
+####################################################
+Search Text is  inside 2nd statement ge india
+####################################################
+####################################################
+Search Result is  inside 3rd statement a1
+####################################################
+
+[31mFailed scenarios:[0m
+[31msrc/test/resources/features/googlesearch1/serenity_bdd_search.feature:22 [0m# Scenario: @@@@@ Google should display appropriate search results page when I enter a Search Term @@@@
+[31msrc/test/resources/features/googlesearch1/serenity_bdd_search.feature:26 [0m# Scenario: @@@@@ Second  Google should display appropriate search results page when I enter a Search Term @@@@
+[31msrc/test/resources/features/googlesearch1/serenity_bdd_search.feature:38 [0m# Scenario Outline: Google should display appropriate search results page when I enter a Search Term 1
+[31msrc/test/resources/features/googlesearch1/serenity_bdd_search.feature:39 [0m# Scenario Outline: Google should display appropriate search results page when I enter a Search Term 1
+
+5 Scenarios ([31m4 failed[0m, [32m1 passed[0m)
+24 Steps ([31m4 failed[0m, [36m3 skipped[0m, [32m17 passed[0m)
+0m2.843s
+
+java.lang.AssertionError: 
+Expected: is equalToIgnoringCase("a1")
+     but: was a3
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:8)
+	at com.serenity.demo.steps.GoogleSearchStorySteps.the_result_successfull(GoogleSearchStorySteps.java:74)
+	at ?.Then the result should contains SearchResult(src/test/resources/features/googlesearch1/serenity_bdd_search.feature:23)
+
+java.lang.AssertionError: 
+Expected: is equalToIgnoringCase("a1")
+     but: was a3
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:8)
+	at com.serenity.demo.steps.GoogleSearchStorySteps.the_result_successfull(GoogleSearchStorySteps.java:74)
+	at ?.Then the result should contains SearchResult(src/test/resources/features/googlesearch1/serenity_bdd_search.feature:29)
+
+java.lang.Exception: Skipping the test 
+	at com.serenity.demo.steps.GoogleSearchStorySteps.givenUserIsOnGoogleSearchPage(GoogleSearchStorySteps.java:38)
+	at ?.Given user is on home Google Search Page '2'(src/test/resources/features/googlesearch1/serenity_bdd_search.feature:32)
+
+java.lang.AssertionError: 
+Expected: is equalToIgnoringCase("a1")
+     but: was a3
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:8)
+	at com.serenity.demo.steps.GoogleSearchStorySteps.the_result_successfull(GoogleSearchStorySteps.java:74)
+	at ?.Then the result should contains SearchResult(src/test/resources/features/googlesearch1/serenity_bdd_search.feature:34)
+
+Tests run: 29, Failures: 6, Errors: 2, Skipped: 3, Time elapsed: 4.557 sec <<< FAILURE! - in com.serenity.demo.SerenityBDDSearch
+Then the result should contains SearchResult(Scenario: @@@@@ Google should display appropriate search results page when I enter a Search Term @@@@)  Time elapsed: 0.01 sec  <<< FAILURE!
+java.lang.AssertionError: 
+
+Expected: is equalToIgnoringCase("a1")
+     but: was a3
+
+Scenario: @@@@@ Google should display appropriate search results page when I enter a Search Term @@@@  Time elapsed: 0.01 sec  <<< FAILURE!
+java.lang.AssertionError: 
+
+Expected: is equalToIgnoringCase("a1")
+     but: was a3
+
+Then the result should contains SearchResult(Scenario: @@@@@ Second  Google should display appropriate search results page when I enter a Search Term @@@@)  Time elapsed: 0 sec  <<< FAILURE!
+java.lang.AssertionError: 
+
+Expected: is equalToIgnoringCase("a1")
+     but: was a3
+
+Scenario: @@@@@ Second  Google should display appropriate search results page when I enter a Search Term @@@@  Time elapsed: 0 sec  <<< FAILURE!
+java.lang.AssertionError: 
+
+Expected: is equalToIgnoringCase("a1")
+     but: was a3
+
+Given user is on home Google Search Page '2'(| 2 |)  Time elapsed: 0.025 sec  <<< ERROR!
+java.lang.Exception: Skipping the test 
+
+| 2 |  Time elapsed: 0.025 sec  <<< ERROR!
+java.lang.Exception: Skipping the test 
+
+Then the result should contains SearchResult(| 3 |)  Time elapsed: 0 sec  <<< FAILURE!
+java.lang.AssertionError: 
+
+Expected: is equalToIgnoringCase("a1")
+     but: was a3
+
+| 3 |  Time elapsed: 0 sec  <<< FAILURE!
+java.lang.AssertionError: 
+
+Expected: is equalToIgnoringCase("a1")
+     but: was a3
+
+Running com.serenity.demo.SerenityBDDSearch1
+Iteration Number 1
+System porpertyC:\Users\ac837232\Documents\ExpressYard\ff\BDDSerenWithScreenShot
+Total rows - 5
+Test Starts from row Number - 1
+Total rows of data are - 3
+capabilityRunmode true
+featureRunmode true
+sceanrioRunmode true
+dataRunmode true
+Total rows - 5
+Test Starts from row Number - 1
+Total rows of data are - 3
+####################################################
+Search Text is   1serenity bdd
+Search result is 1a3
+####################################################
+####################################################
+Search Text is  inside 2nd statement serenity bdd
+####################################################
+####################################################
+Search Result is  inside 3rd statement a3
+####################################################
+Iteration Number 1
+Total rows - 5
+Test Starts from row Number - 1
+Total rows of data are - 3
+capabilityRunmode true
+featureRunmode true
+sceanrioRunmode true
+dataRunmode true
+Total rows - 5
+Test Starts from row Number - 1
+Total rows of data are - 3
+####################################################
+Search Text is   1serenity bdd
+Search result is 1a3
+####################################################
+####################################################
+Search Text is  inside 2nd statement serenity bdd
+####################################################
+####################################################
+Search Result is  inside 3rd statement a3
+####################################################
+Iteration Number 2
+Total rows - 5
+Test Starts from row Number - 1
+Total rows of data are - 3
+capabilityRunmode true
+featureRunmode true
+sceanrioRunmode true
+dataRunmode false
+Skipping
+Iteration Number 3
+Total rows - 5
+Test Starts from row Number - 1
+Total rows of data are - 3
+capabilityRunmode true
+featureRunmode true
+sceanrioRunmode true
+dataRunmode true
+Total rows - 5
+Test Starts from row Number - 1
+Total rows of data are - 3
+####################################################
+Search Text is   3ge india
+Search result is 3a1
+####################################################
+####################################################
+Search Text is  inside 2nd statement ge india
+####################################################
+####################################################
+Search Result is  inside 3rd statement a1
+####################################################
+Doc Comments areSome Title, Eh?
+===============
+Here is the first paragraph of my blog post. Lorem ipsum dolor sit amet,
+consectetur adipiscing elit.
+####################################################
+Search Text is  inside 2nd statement null
+####################################################
+####################################################
+Search Result is  inside 3rd statement null
+####################################################
+
+[31mFailed scenarios:[0m
+[31msrc/test/resources/features/googlesearch1/serenity_bdd_search_1.feature:20 [0m# Scenario Outline: Google should display appropriate search results page when I enter a Search Term 1
+[31msrc/test/resources/features/googlesearch1/serenity_bdd_search_1.feature:21 [0m# Scenario Outline: Google should display appropriate search results page when I enter a Search Term 1
+[31msrc/test/resources/features/googlesearch1/serenity_bdd_search_1.feature:23 [0m# Scenario: Doc String &&&&& Google should display appropriate search results page when I enter a Search Term
+
+5 Scenarios ([31m3 failed[0m, [32m2 passed[0m)
+15 Steps ([31m3 failed[0m, [36m2 skipped[0m, [32m10 passed[0m)
+0m1.672s
+
+java.lang.Exception: Skipping the test 
+	at com.serenity.demo.steps.GoogleSearchStorySteps.givenUserIsOnGoogleSearchPage(GoogleSearchStorySteps.java:38)
+	at ?.Given user is on home Google Search Page '2'(src/test/resources/features/googlesearch1/serenity_bdd_search_1.feature:14)
+
+java.lang.AssertionError: 
+Expected: is equalToIgnoringCase("a1")
+     but: was a3
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:8)
+	at com.serenity.demo.steps.GoogleSearchStorySteps.the_result_successfull(GoogleSearchStorySteps.java:74)
+	at ?.Then the result should contains SearchResult(src/test/resources/features/googlesearch1/serenity_bdd_search_1.feature:16)
+
+java.lang.IllegalArgumentException: Non-null value required by IsEqualIgnoringCase()
+	at org.hamcrest.text.IsEqualIgnoringCase.<init>(IsEqualIgnoringCase.java:22)
+	at org.hamcrest.text.IsEqualIgnoringCase.equalToIgnoringCase(IsEqualIgnoringCase.java:56)
+	at org.hamcrest.Matchers.equalToIgnoringCase(Matchers.java:1215)
+	at com.serenity.demo.steps.GoogleSearchStorySteps.the_result_successfull(GoogleSearchStorySteps.java:74)
+	at ?.Then the result should contains SearchResult(src/test/resources/features/googlesearch1/serenity_bdd_search_1.feature:32)
+
+Tests run: 20, Failures: 2, Errors: 4, Skipped: 2, Time elapsed: 3.418 sec <<< FAILURE! - in com.serenity.demo.SerenityBDDSearch1
+Given user is on home Google Search Page '2'(| 2 |)  Time elapsed: 0.001 sec  <<< ERROR!
+java.lang.Exception: Skipping the test 
+
+| 2 |  Time elapsed: 0.001 sec  <<< ERROR!
+java.lang.Exception: Skipping the test 
+
+Then the result should contains SearchResult(| 3 |)  Time elapsed: 0 sec  <<< FAILURE!
+java.lang.AssertionError: 
+
+Expected: is equalToIgnoringCase("a1")
+     but: was a3
+
+| 3 |  Time elapsed: 0 sec  <<< FAILURE!
+java.lang.AssertionError: 
+
+Expected: is equalToIgnoringCase("a1")
+     but: was a3
+
+Then the result should contains SearchResult(Scenario: Doc String &&&&& Google should display appropriate search results page when I enter a Search Term)  Time elapsed: 0 sec  <<< ERROR!
+java.lang.IllegalArgumentException: Non-null value required by IsEqualIgnoringCase()
+
+Scenario: Doc String &&&&& Google should display appropriate search results page when I enter a Search Term  Time elapsed: 0.01 sec  <<< ERROR!
+java.lang.IllegalArgumentException: Non-null value required by IsEqualIgnoringCase()
+
+
+Results :
+
+Failed tests: 
+  
+Expected: is equalToIgnoringCase("a1")
+     but: was a3
+  
+Expected: is equalToIgnoringCase("a1")
+     but: was a3
+  
+Expected: is equalToIgnoringCase("a1")
+     but: was a3
+  
+Expected: is equalToIgnoringCase("a1")
+     but: was a3
+| 3 |.Then the result should contains SearchResult(| 3 |)
+  Run 1: 
+Expected: is equalToIgnoringCase("a1")
+     but: was a3
+  Run 2: 
+Expected: is equalToIgnoringCase("a1")
+     but: was a3
+
+| 3 |.| 3 |
+  Run 1: 
+Expected: is equalToIgnoringCase("a1")
+     but: was a3
+  Run 2: 
+Expected: is equalToIgnoringCase("a1")
+     but: was a3
+
+Tests in error: 
+  Non-null value required by IsEqualIgnoringCase()
+  Non-null value required by IsEqualIgnoringCase()
+| 2 |.Given user is on home Google Search Page '2'(| 2 |)
+  Run 1: Skipping the test 
+  Run 2: Skipping the test 
+
+| 2 |.| 2 |
+  Run 1: Skipping the test 
+  Run 2: Skipping the test 
+
+
+Tests run: 42, Failures: 6, Errors: 4, Skipped: 2
+
+[WARNING] File encoding has not been set, using platform encoding Cp1252, i.e. build is platform dependent! The file encoding for reports output files should be provided by the POM property ${project.reporting.outputEncoding}.
+[INFO] 
+[INFO] --- serenity-maven-plugin:1.1.31:aggregate (serenity-reports) @ ui-acceptance-test ---
+[INFO] project.build.directory : C:\Users\ac837232\Documents\ExpressYard\ff\BDDSerenWithScreenShot
+[INFO] project.reporting.OutputDirectory : null
+[INFO] OutputDirectory : C:\Users\ac837232\Documents\ExpressYard\ff\BDDSerenWithScreenShot\target\site\serenity
+[INFO] current_project.base.dir: C:\Users\ac837232\Documents\ExpressYard\ff\BDDSerenWithScreenShot
+Generating HTML Story Reports from C:\Users\ac837232\Documents\ExpressYard\ff\BDDSerenWithScreenShot\target\site\serenity
+Generating HTML Story Reports to C:\Users\ac837232\Documents\ExpressYard\ff\BDDSerenWithScreenShot\target\site\serenity
+[INFO] project.build.directory : C:\Users\ac837232\Documents\ExpressYard\ff\BDDSerenWithScreenShot
+[INFO] project.reporting.OutputDirectory : null
+[INFO] OutputDirectory : C:\Users\ac837232\Documents\ExpressYard\ff\BDDSerenWithScreenShot\target\site\serenity
+Merging requirements = [Requirement{name='Expressyardcrb', type='capability' parent = 'null', cardNumber='null'}, Requirement{name='Googlesearch1', type='capability' parent = 'null', cardNumber='null'}, Requirement{name='Googlesearch2', type='capability' parent = 'null', cardNumber='null'}]
+Merging requirements = []
+Merged requirements set = [Requirement{name='Expressyardcrb', type='capability' parent = 'null', cardNumber='null'}, Requirement{name='Googlesearch1', type='capability' parent = 'null', cardNumber='null'}, Requirement{name='Googlesearch2', type='capability' parent = 'null', cardNumber='null'}]
+[INFO] REPORTS GENERATED IN C:\Users\ac837232\Documents\ExpressYard\ff\BDDSerenWithScreenShot\target\site\serenity
+[INFO] REPORT HOME PAGE: C:\Users\ac837232\Documents\ExpressYard\ff\BDDSerenWithScreenShot\target\site\serenity\index.html
+[INFO] Generating release reports for: [Release{label='Release-1'}]
+GENERATE CUSTOM REPORTS
+[INFO] 
+[INFO] --- maven-failsafe-plugin:2.19:verify (default) @ ui-acceptance-test ---
+[WARNING] File encoding has not been set, using platform encoding Cp1252, i.e. build is platform dependent! The file encoding for reports output files should be provided by the POM property ${project.reporting.outputEncoding}.
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 26.019 s
+[INFO] Finished at: 2016-07-13T15:19:25+05:30
+[INFO] Final Memory: 23M/981M
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-failsafe-plugin:2.19:verify (default) on project ui-acceptance-test: There are test failures.
+[ERROR] 
+[ERROR] Please refer to C:\Users\ac837232\Documents\ExpressYard\ff\BDDSerenWithScreenShot\target\failsafe-reports for the individual test results.
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
