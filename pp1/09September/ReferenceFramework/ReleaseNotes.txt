@@ -1,0 +1,36 @@
+Release Notes:
+
+Release Number: 01
+Release Date: 12-August-2016
+Description:
+1. Added few more Util Functions in Class EY_FW_Utility
+2. Update Framework Package structure, removed runner word 
+3. Created Java Docs for Framework Util Functions and other classes
+4. Added Comments as per Java Doc Standards across all framework classes and library functions
+
+Release Number: 02
+Release Date: 19-August-2016
+Description:
+1. Added Code Reveiw Checklist in excel format.
+2. Updated Java Docs for Framework Util Functions and other classes
+3. Updated Util Class with few more functions
+4. Added sikuli dependency in POM
+5. Added images folder under src/test/resources to store Sikuli images data
+6. Added new plugin under Eclipse for Cucumber, 
+   Plugin Path: http://rlogiacco.github.com/Natural
+   Documentation Path: https://github.com/rlogiacco/Natural/wiki
+
+Release Number: 03
+Release Date: 26-August-2016
+Description:
+1. Added Logger to generate Log files per feature file in HTML format under target/logs folder
+2. Updated Cucumber Steps, Serenity Steps and Test Scripts to generate logging
+3. Updated Util Functions to provide support for Logging
+4. Updated Code Review Checklist 
+
+
+Release Number: 04
+Release Date: 09-September-2016
+Description:
+1. Updated Util Functions Library with some more Util Functions
+4. Updated Java Docs for Framework Util Functions and other classes
