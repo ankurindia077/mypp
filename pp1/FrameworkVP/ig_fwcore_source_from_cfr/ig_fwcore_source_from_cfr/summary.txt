@@ -1,0 +1,2 @@
+Summary for /www/javadecompilers/app/public/data/07.07.16/0eb3d9fc9fb90b1730c1dea9462988c8/ig_fwcore.jar
+Decompiled with CFR 0_115
