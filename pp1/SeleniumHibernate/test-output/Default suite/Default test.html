@@ -1,0 +1,1338 @@
+<html>
+<head>
+<title>TestNG:  Default test</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Default test</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>19/11/0</td>
+</tr><tr>
+<td>Started on:</td><td>Wed Mar 08 12:32:56 IST 2017</td>
+</tr>
+<tr><td>Total time:</td><td>50 seconds (50016 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.spring.hibernate.test.AngularAndWebDriverTest.altRoot_find_elements()'><b>altRoot_find_elements</b><br>Test class: com.spring.hibernate.test.AngularAndWebDriverTest</td>
+<td><div><pre>org.seleniumhq.selenium.fluent.FluentExecutionStopped: WebDriverException during invocation of: ?.span(bindings({{greeting}}))
+	at org.seleniumhq.selenium.fluent.Internal$BaseFluentWebDriver.wrapRuntimeException(Internal.java:1009)
+	at org.seleniumhq.selenium.fluent.Internal$BaseFluentWebDriver.executeAndWrapReThrowIfNeeded(Internal.java:1037)
+	at org.seleniumhq.selenium.fluent.Internal$BaseFluentWebDriver.single(Internal.java:886)
+	at org.seleniumhq.selenium.fluent.Internal$BaseFluentWebDriver.span(Internal.java:105)
+	at org.seleniumhq.selenium.fluent.FluentWebDriver.span(FluentWebDriver.java:116)
+	at com.spring.hibernate.test.AngularAndWebDriverTest.altRoot_find_elements(AngularAndWebDriverTest.java:493)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:104)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:645)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:851)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1177)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:756)
+	at org.testng.TestRunner.run(TestRunner.java:610)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:382)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1293)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1218)
+	at org.testng.TestNG.runSuites(TestNG.java:1133)
+	at org.testng.TestNG.run(TestNG.java:1104)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:230)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:76)
+Caused by: org.openqa.selenium.WebDriverException: unknown error: angular is not defined
+  (Session info: chrome=56.0.2924.87)
+  (Driver info: chromedriver=2.27.440174 (e97a722caafc2d3a8b807ee115bfb307f7d2cfd9),platform=Windows NT 6.1.7601 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 118 milliseconds
+Build info: version: &apos;unknown&apos;, revision: &apos;86a5d70&apos;, time: &apos;2017-02-16 07:47:51 -0800&apos;
+System info: host: &apos;LINMB550&apos;, ip: &apos;10.207.163.101&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_121&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.27.440174 (e97a722caafc2d3a8b807ee115bfb307f7d2cfd9), userDataDir=C:\Users\ankurcha\AppData\Local\Temp\scoped_dir9152_16605}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=56.0.2924.87, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
+Session ID: aa924b649118224faa55c86f351d5221
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:216)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:168)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:635)
+	at org.openqa.selenium.remote.RemoteWebDriver.executeScript(RemoteWebDriver.java:537)
+	at com.spring.hibernate.ngwebdriver.ByAngularBinding.getObject(ByAngularBinding.java:16)
+	at com.spring.hibernate.ngwebdriver.ByAngular$BaseBy.findElement(ByAngular.java:166)
+	at com.spring.hibernate.ngwebdriver.ByAngularBinding.findElement(ByAngularBinding.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:360)
+	at org.seleniumhq.selenium.fluent.FluentWebDriver.actualFindElement(FluentWebDriver.java:63)
+	at org.seleniumhq.selenium.fluent.FluentWebDriver.findElement(FluentWebDriver.java:53)
+	at org.seleniumhq.selenium.fluent.Internal$BaseFluentWebDriver$FindElement.execute(Internal.java:933)
+	at org.seleniumhq.selenium.fluent.Internal$BaseFluentWebDriver$FindElement.execute(Internal.java:911)
+	at org.seleniumhq.selenium.fluent.internal.Execution.doExecution(Execution.java:39)
+	at org.seleniumhq.selenium.fluent.Internal$BaseFluentWebDriver.executeAndWrapReThrowIfNeeded(Internal.java:1031)
+	... 29 more
+</pre></div><a href='#' onClick='toggleBox("stack-trace1275035040", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1275035040'><pre>org.seleniumhq.selenium.fluent.FluentExecutionStopped: WebDriverException during invocation of: ?.span(bindings({{greeting}}))
+	at org.seleniumhq.selenium.fluent.Internal$BaseFluentWebDriver.wrapRuntimeException(Internal.java:1009)
+	at org.seleniumhq.selenium.fluent.Internal$BaseFluentWebDriver.executeAndWrapReThrowIfNeeded(Internal.java:1037)
+	at org.seleniumhq.selenium.fluent.Internal$BaseFluentWebDriver.single(Internal.java:886)
+	at org.seleniumhq.selenium.fluent.Internal$BaseFluentWebDriver.span(Internal.java:105)
+	at org.seleniumhq.selenium.fluent.FluentWebDriver.span(FluentWebDriver.java:116)
+	at com.spring.hibernate.test.AngularAndWebDriverTest.altRoot_find_elements(AngularAndWebDriverTest.java:493)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:104)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:645)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:851)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1177)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:756)
+	at org.testng.TestRunner.run(TestRunner.java:610)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:382)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1293)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1218)
+	at org.testng.TestNG.runSuites(TestNG.java:1133)
+	at org.testng.TestNG.run(TestNG.java:1104)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:230)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:76)
+Caused by: org.openqa.selenium.WebDriverException: unknown error: angular is not defined
+  (Session info: chrome=56.0.2924.87)
+  (Driver info: chromedriver=2.27.440174 (e97a722caafc2d3a8b807ee115bfb307f7d2cfd9),platform=Windows NT 6.1.7601 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 118 milliseconds
+Build info: version: &apos;unknown&apos;, revision: &apos;86a5d70&apos;, time: &apos;2017-02-16 07:47:51 -0800&apos;
+System info: host: &apos;LINMB550&apos;, ip: &apos;10.207.163.101&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_121&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.27.440174 (e97a722caafc2d3a8b807ee115bfb307f7d2cfd9), userDataDir=C:\Users\ankurcha\AppData\Local\Temp\scoped_dir9152_16605}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=56.0.2924.87, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
+Session ID: aa924b649118224faa55c86f351d5221
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:216)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:168)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:635)
+	at org.openqa.selenium.remote.RemoteWebDriver.executeScript(RemoteWebDriver.java:537)
+	at com.spring.hibernate.ngwebdriver.ByAngularBinding.getObject(ByAngularBinding.java:16)
+	at com.spring.hibernate.ngwebdriver.ByAngular$BaseBy.findElement(ByAngular.java:166)
+	at com.spring.hibernate.ngwebdriver.ByAngularBinding.findElement(ByAngularBinding.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:360)
+	at org.seleniumhq.selenium.fluent.FluentWebDriver.actualFindElement(FluentWebDriver.java:63)
+	at org.seleniumhq.selenium.fluent.FluentWebDriver.findElement(FluentWebDriver.java:53)
+	at org.seleniumhq.selenium.fluent.Internal$BaseFluentWebDriver$FindElement.execute(Internal.java:933)
+	at org.seleniumhq.selenium.fluent.Internal$BaseFluentWebDriver$FindElement.execute(Internal.java:911)
+	at org.seleniumhq.selenium.fluent.internal.Execution.doExecution(Execution.java:39)
+	at org.seleniumhq.selenium.fluent.Internal$BaseFluentWebDriver.executeAndWrapReThrowIfNeeded(Internal.java:1031)
+	... 29 more
+</pre></div></td>
+<td>4</td>
+<td>com.spring.hibernate.test.AngularAndWebDriverTest@56ac3a89</td></tr>
+<tr>
+<td title='com.spring.hibernate.test.AngularAndWebDriverTest.basic_actions()'><b>basic_actions</b><br>Test class: com.spring.hibernate.test.AngularAndWebDriverTest</td>
+<td><div><pre>org.seleniumhq.selenium.fluent.FluentExecutionStopped: NoSuchElementException during invocation of: ?.input(By.name: points)
+	at org.seleniumhq.selenium.fluent.Internal$BaseFluentWebDriver.wrapRuntimeException(Internal.java:1009)
+	at org.seleniumhq.selenium.fluent.Internal$BaseFluentWebDriver.executeAndWrapReThrowIfNeeded(Internal.java:1037)
+	at org.seleniumhq.selenium.fluent.Internal$BaseFluentWebDriver.single(Internal.java:886)
+	at org.seleniumhq.selenium.fluent.Internal$BaseFluentWebDriver.input(Internal.java:177)
+	at org.seleniumhq.selenium.fluent.FluentWebDriver.input(FluentWebDriver.java:196)
+	at com.spring.hibernate.test.AngularAndWebDriverTest.basic_actions(AngularAndWebDriverTest.java:509)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:104)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:645)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:851)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1177)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:756)
+	at org.testng.TestRunner.run(TestRunner.java:610)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:382)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1293)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1218)
+	at org.testng.TestNG.runSuites(TestNG.java:1133)
+	at org.testng.TestNG.run(TestNG.java:1104)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:230)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:76)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;name&quot;,&quot;selector&quot;:&quot;points&quot;}
+  (Session info: chrome=56.0.2924.87)
+  (Driver info: chromedriver=2.27.440174 (e97a722caafc2d3a8b807ee115bfb307f7d2cfd9),platform=Windows NT 6.1.7601 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 48 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;unknown&apos;, revision: &apos;86a5d70&apos;, time: &apos;2017-02-16 07:47:51 -0800&apos;
+System info: host: &apos;LINMB550&apos;, ip: &apos;10.207.163.101&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_121&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.27.440174 (e97a722caafc2d3a8b807ee115bfb307f7d2cfd9), userDataDir=C:\Users\ankurcha\AppData\Local\Temp\scoped_dir9152_16605}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=56.0.2924.87, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
+Session ID: aa924b649118224faa55c86f351d5221
+*** Element info: {Using=name, value=points}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:216)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:168)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:635)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByName(RemoteWebDriver.java:449)
+	at org.openqa.selenium.By$ByName.findElement(By.java:303)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:360)
+	at org.seleniumhq.selenium.fluent.FluentWebDriver.actualFindElement(FluentWebDriver.java:63)
+	at org.seleniumhq.selenium.fluent.FluentWebDriver.findElement(FluentWebDriver.java:53)
+	at org.seleniumhq.selenium.fluent.Internal$BaseFluentWebDriver$FindElement.execute(Internal.java:933)
+	at org.seleniumhq.selenium.fluent.Internal$BaseFluentWebDriver$FindElement.execute(Internal.java:911)
+	at org.seleniumhq.selenium.fluent.internal.Execution.doExecution(Execution.java:39)
+	at org.seleniumhq.selenium.fluent.Internal$BaseFluentWebDriver.executeAndWrapReThrowIfNeeded(Internal.java:1031)
+	... 29 more
+</pre></div><a href='#' onClick='toggleBox("stack-trace485845532", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace485845532'><pre>org.seleniumhq.selenium.fluent.FluentExecutionStopped: NoSuchElementException during invocation of: ?.input(By.name: points)
+	at org.seleniumhq.selenium.fluent.Internal$BaseFluentWebDriver.wrapRuntimeException(Internal.java:1009)
+	at org.seleniumhq.selenium.fluent.Internal$BaseFluentWebDriver.executeAndWrapReThrowIfNeeded(Internal.java:1037)
+	at org.seleniumhq.selenium.fluent.Internal$BaseFluentWebDriver.single(Internal.java:886)
+	at org.seleniumhq.selenium.fluent.Internal$BaseFluentWebDriver.input(Internal.java:177)
+	at org.seleniumhq.selenium.fluent.FluentWebDriver.input(FluentWebDriver.java:196)
+	at com.spring.hibernate.test.AngularAndWebDriverTest.basic_actions(AngularAndWebDriverTest.java:509)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:104)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:645)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:851)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1177)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:756)
+	at org.testng.TestRunner.run(TestRunner.java:610)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:382)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1293)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1218)
+	at org.testng.TestNG.runSuites(TestNG.java:1133)
+	at org.testng.TestNG.run(TestNG.java:1104)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:230)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:76)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;name&quot;,&quot;selector&quot;:&quot;points&quot;}
+  (Session info: chrome=56.0.2924.87)
+  (Driver info: chromedriver=2.27.440174 (e97a722caafc2d3a8b807ee115bfb307f7d2cfd9),platform=Windows NT 6.1.7601 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 48 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;unknown&apos;, revision: &apos;86a5d70&apos;, time: &apos;2017-02-16 07:47:51 -0800&apos;
+System info: host: &apos;LINMB550&apos;, ip: &apos;10.207.163.101&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_121&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.27.440174 (e97a722caafc2d3a8b807ee115bfb307f7d2cfd9), userDataDir=C:\Users\ankurcha\AppData\Local\Temp\scoped_dir9152_16605}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=56.0.2924.87, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
+Session ID: aa924b649118224faa55c86f351d5221
+*** Element info: {Using=name, value=points}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:216)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:168)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:635)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByName(RemoteWebDriver.java:449)
+	at org.openqa.selenium.By$ByName.findElement(By.java:303)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:360)
+	at org.seleniumhq.selenium.fluent.FluentWebDriver.actualFindElement(FluentWebDriver.java:63)
+	at org.seleniumhq.selenium.fluent.FluentWebDriver.findElement(FluentWebDriver.java:53)
+	at org.seleniumhq.selenium.fluent.Internal$BaseFluentWebDriver$FindElement.execute(Internal.java:933)
+	at org.seleniumhq.selenium.fluent.Internal$BaseFluentWebDriver$FindElement.execute(Internal.java:911)
+	at org.seleniumhq.selenium.fluent.internal.Execution.doExecution(Execution.java:39)
+	at org.seleniumhq.selenium.fluent.Internal$BaseFluentWebDriver.executeAndWrapReThrowIfNeeded(Internal.java:1031)
+	... 29 more
+</pre></div></td>
+<td>2</td>
+<td>com.spring.hibernate.test.AngularAndWebDriverTest@56ac3a89</td></tr>
+<tr>
+<td title='com.spring.hibernate.test.AngularAndWebDriverTest.basic_elements_chained_call_should_wait_to_grab_the_WebElement_until_a_method_is_called()'><b>basic_elements_chained_call_should_wait_to_grab_the_WebElement_until_a_method_is_called</b><br>Test class: com.spring.hibernate.test.AngularAndWebDriverTest</td>
+<td><div><pre>org.seleniumhq.selenium.fluent.FluentExecutionStopped: NoSuchElementException during invocation of: ?.div(By.id: baz)
+	at org.seleniumhq.selenium.fluent.Internal$BaseFluentWebDriver.wrapRuntimeException(Internal.java:1009)
+	at org.seleniumhq.selenium.fluent.Internal$BaseFluentWebDriver.executeAndWrapReThrowIfNeeded(Internal.java:1037)
+	at org.seleniumhq.selenium.fluent.Internal$BaseFluentWebDriver.single(Internal.java:886)
+	at org.seleniumhq.selenium.fluent.Internal$BaseFluentWebDriver.div(Internal.java:123)
+	at org.seleniumhq.selenium.fluent.FluentWebDriver.div(FluentWebDriver.java:136)
+	at com.spring.hibernate.test.AngularAndWebDriverTest.basic_elements_chained_call_should_wait_to_grab_the_WebElement_until_a_method_is_called(AngularAndWebDriverTest.java:549)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:104)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:645)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:851)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1177)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:756)
+	at org.testng.TestRunner.run(TestRunner.java:610)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:382)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1293)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1218)
+	at org.testng.TestNG.runSuites(TestNG.java:1133)
+	at org.testng.TestNG.run(TestNG.java:1104)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:230)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:76)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;id&quot;,&quot;selector&quot;:&quot;baz&quot;}
+  (Session info: chrome=56.0.2924.87)
+  (Driver info: chromedriver=2.27.440174 (e97a722caafc2d3a8b807ee115bfb307f7d2cfd9),platform=Windows NT 6.1.7601 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 51 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;unknown&apos;, revision: &apos;86a5d70&apos;, time: &apos;2017-02-16 07:47:51 -0800&apos;
+System info: host: &apos;LINMB550&apos;, ip: &apos;10.207.163.101&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_121&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.27.440174 (e97a722caafc2d3a8b807ee115bfb307f7d2cfd9), userDataDir=C:\Users\ankurcha\AppData\Local\Temp\scoped_dir9152_16605}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=56.0.2924.87, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
+Session ID: aa924b649118224faa55c86f351d5221
+*** Element info: {Using=id, value=baz}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:216)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:168)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:635)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:417)
+	at org.openqa.selenium.By$ById.findElement(By.java:218)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:360)
+	at org.seleniumhq.selenium.fluent.FluentWebDriver.actualFindElement(FluentWebDriver.java:63)
+	at org.seleniumhq.selenium.fluent.FluentWebDriver.findElement(FluentWebDriver.java:53)
+	at org.seleniumhq.selenium.fluent.Internal$BaseFluentWebDriver$FindElement.execute(Internal.java:933)
+	at org.seleniumhq.selenium.fluent.Internal$BaseFluentWebDriver$FindElement.execute(Internal.java:911)
+	at org.seleniumhq.selenium.fluent.internal.Execution.doExecution(Execution.java:39)
+	at org.seleniumhq.selenium.fluent.Internal$BaseFluentWebDriver.executeAndWrapReThrowIfNeeded(Internal.java:1031)
+	... 29 more
+</pre></div><a href='#' onClick='toggleBox("stack-trace193388045", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace193388045'><pre>org.seleniumhq.selenium.fluent.FluentExecutionStopped: NoSuchElementException during invocation of: ?.div(By.id: baz)
+	at org.seleniumhq.selenium.fluent.Internal$BaseFluentWebDriver.wrapRuntimeException(Internal.java:1009)
+	at org.seleniumhq.selenium.fluent.Internal$BaseFluentWebDriver.executeAndWrapReThrowIfNeeded(Internal.java:1037)
+	at org.seleniumhq.selenium.fluent.Internal$BaseFluentWebDriver.single(Internal.java:886)
+	at org.seleniumhq.selenium.fluent.Internal$BaseFluentWebDriver.div(Internal.java:123)
+	at org.seleniumhq.selenium.fluent.FluentWebDriver.div(FluentWebDriver.java:136)
+	at com.spring.hibernate.test.AngularAndWebDriverTest.basic_elements_chained_call_should_wait_to_grab_the_WebElement_until_a_method_is_called(AngularAndWebDriverTest.java:549)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:104)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:645)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:851)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1177)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:756)
+	at org.testng.TestRunner.run(TestRunner.java:610)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:382)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1293)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1218)
+	at org.testng.TestNG.runSuites(TestNG.java:1133)
+	at org.testng.TestNG.run(TestNG.java:1104)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:230)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:76)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;id&quot;,&quot;selector&quot;:&quot;baz&quot;}
+  (Session info: chrome=56.0.2924.87)
+  (Driver info: chromedriver=2.27.440174 (e97a722caafc2d3a8b807ee115bfb307f7d2cfd9),platform=Windows NT 6.1.7601 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 51 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;unknown&apos;, revision: &apos;86a5d70&apos;, time: &apos;2017-02-16 07:47:51 -0800&apos;
+System info: host: &apos;LINMB550&apos;, ip: &apos;10.207.163.101&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_121&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.27.440174 (e97a722caafc2d3a8b807ee115bfb307f7d2cfd9), userDataDir=C:\Users\ankurcha\AppData\Local\Temp\scoped_dir9152_16605}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=56.0.2924.87, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
+Session ID: aa924b649118224faa55c86f351d5221
+*** Element info: {Using=id, value=baz}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:216)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:168)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:635)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:417)
+	at org.openqa.selenium.By$ById.findElement(By.java:218)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:360)
+	at org.seleniumhq.selenium.fluent.FluentWebDriver.actualFindElement(FluentWebDriver.java:63)
+	at org.seleniumhq.selenium.fluent.FluentWebDriver.findElement(FluentWebDriver.java:53)
+	at org.seleniumhq.selenium.fluent.Internal$BaseFluentWebDriver$FindElement.execute(Internal.java:933)
+	at org.seleniumhq.selenium.fluent.Internal$BaseFluentWebDriver$FindElement.execute(Internal.java:911)
+	at org.seleniumhq.selenium.fluent.internal.Execution.doExecution(Execution.java:39)
+	at org.seleniumhq.selenium.fluent.Internal$BaseFluentWebDriver.executeAndWrapReThrowIfNeeded(Internal.java:1031)
+	... 29 more
+</pre></div></td>
+<td>2</td>
+<td>com.spring.hibernate.test.AngularAndWebDriverTest@56ac3a89</td></tr>
+<tr>
+<td title='com.spring.hibernate.test.AngularAndWebDriverTest.basic_elements_should_allow_using_repeater_locator_within_map()'><b>basic_elements_should_allow_using_repeater_locator_within_map</b><br>Test class: com.spring.hibernate.test.AngularAndWebDriverTest</td>
+<td><div><pre>org.seleniumhq.selenium.fluent.FluentExecutionStopped: NoSuchElementException during invocation of: ?.lis(repeater(allinfo in days))
+	at org.seleniumhq.selenium.fluent.Internal$BaseFluentWebDriver.wrapRuntimeException(Internal.java:1009)
+	at org.seleniumhq.selenium.fluent.Internal$BaseFluentWebDriver.executeAndWrapReThrowIfNeeded(Internal.java:1037)
+	at org.seleniumhq.selenium.fluent.Internal$BaseFluentWebDriver.multiple(Internal.java:956)
+	at org.seleniumhq.selenium.fluent.Internal$BaseFluentWebDriver.lis(Internal.java:815)
+	at org.seleniumhq.selenium.fluent.FluentWebDriver.lis(FluentWebDriver.java:903)
+	at com.spring.hibernate.test.AngularAndWebDriverTest.basic_elements_should_allow_using_repeater_locator_within_map(AngularAndWebDriverTest.java:573)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:104)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:645)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:851)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1177)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:756)
+	at org.testng.TestRunner.run(TestRunner.java:610)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:382)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1293)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1218)
+	at org.testng.TestNG.runSuites(TestNG.java:1133)
+	at org.testng.TestNG.run(TestNG.java:1104)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:230)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:76)
+Caused by: org.openqa.selenium.NoSuchElementException: repeater(allinfo in days) didn&apos;t have any matching elements at this place in the DOM
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;unknown&apos;, revision: &apos;86a5d70&apos;, time: &apos;2017-02-16 07:47:51 -0800&apos;
+System info: host: &apos;LINMB550&apos;, ip: &apos;10.207.163.101&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_121&apos;
+Driver info: driver.version: FluentWebDriver
+	at com.spring.hibernate.ngwebdriver.ByAngular$BaseBy.errorIfNull(ByAngular.java:155)
+	at com.spring.hibernate.ngwebdriver.ByAngular$BaseBy.findElements(ByAngular.java:177)
+	at com.spring.hibernate.ngwebdriver.ByAngularRepeater.findElements(ByAngularRepeater.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:356)
+	at org.seleniumhq.selenium.fluent.FluentWebDriver.actualFindElements(FluentWebDriver.java:68)
+	at org.seleniumhq.selenium.fluent.FluentWebDriver.findElements(FluentWebDriver.java:58)
+	at org.seleniumhq.selenium.fluent.Internal$BaseFluentWebDriver$FindElements.execute(Internal.java:992)
+	at org.seleniumhq.selenium.fluent.Internal$BaseFluentWebDriver$FindElements.execute(Internal.java:980)
+	at org.seleniumhq.selenium.fluent.internal.Execution.doExecution(Execution.java:39)
+	at org.seleniumhq.selenium.fluent.Internal$BaseFluentWebDriver.executeAndWrapReThrowIfNeeded(Internal.java:1031)
+	... 29 more
+</pre></div><a href='#' onClick='toggleBox("stack-trace749282235", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace749282235'><pre>org.seleniumhq.selenium.fluent.FluentExecutionStopped: NoSuchElementException during invocation of: ?.lis(repeater(allinfo in days))
+	at org.seleniumhq.selenium.fluent.Internal$BaseFluentWebDriver.wrapRuntimeException(Internal.java:1009)
+	at org.seleniumhq.selenium.fluent.Internal$BaseFluentWebDriver.executeAndWrapReThrowIfNeeded(Internal.java:1037)
+	at org.seleniumhq.selenium.fluent.Internal$BaseFluentWebDriver.multiple(Internal.java:956)
+	at org.seleniumhq.selenium.fluent.Internal$BaseFluentWebDriver.lis(Internal.java:815)
+	at org.seleniumhq.selenium.fluent.FluentWebDriver.lis(FluentWebDriver.java:903)
+	at com.spring.hibernate.test.AngularAndWebDriverTest.basic_elements_should_allow_using_repeater_locator_within_map(AngularAndWebDriverTest.java:573)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:104)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:645)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:851)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1177)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:756)
+	at org.testng.TestRunner.run(TestRunner.java:610)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:382)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1293)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1218)
+	at org.testng.TestNG.runSuites(TestNG.java:1133)
+	at org.testng.TestNG.run(TestNG.java:1104)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:230)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:76)
+Caused by: org.openqa.selenium.NoSuchElementException: repeater(allinfo in days) didn&apos;t have any matching elements at this place in the DOM
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;unknown&apos;, revision: &apos;86a5d70&apos;, time: &apos;2017-02-16 07:47:51 -0800&apos;
+System info: host: &apos;LINMB550&apos;, ip: &apos;10.207.163.101&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_121&apos;
+Driver info: driver.version: FluentWebDriver
+	at com.spring.hibernate.ngwebdriver.ByAngular$BaseBy.errorIfNull(ByAngular.java:155)
+	at com.spring.hibernate.ngwebdriver.ByAngular$BaseBy.findElements(ByAngular.java:177)
+	at com.spring.hibernate.ngwebdriver.ByAngularRepeater.findElements(ByAngularRepeater.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:356)
+	at org.seleniumhq.selenium.fluent.FluentWebDriver.actualFindElements(FluentWebDriver.java:68)
+	at org.seleniumhq.selenium.fluent.FluentWebDriver.findElements(FluentWebDriver.java:58)
+	at org.seleniumhq.selenium.fluent.Internal$BaseFluentWebDriver$FindElements.execute(Internal.java:992)
+	at org.seleniumhq.selenium.fluent.Internal$BaseFluentWebDriver$FindElements.execute(Internal.java:980)
+	at org.seleniumhq.selenium.fluent.internal.Execution.doExecution(Execution.java:39)
+	at org.seleniumhq.selenium.fluent.Internal$BaseFluentWebDriver.executeAndWrapReThrowIfNeeded(Internal.java:1031)
+	... 29 more
+</pre></div></td>
+<td>2</td>
+<td>com.spring.hibernate.test.AngularAndWebDriverTest@56ac3a89</td></tr>
+<tr>
+<td title='com.spring.hibernate.test.AngularAndWebDriverTest.basic_elements_should_chain_with_index_correctly()'><b>basic_elements_should_chain_with_index_correctly</b><br>Test class: com.spring.hibernate.test.AngularAndWebDriverTest</td>
+<td><div><pre>org.seleniumhq.selenium.fluent.FluentExecutionStopped$BecauseNothingMatchesInFilter: Nothing matched filter, during invocation of: ?.inputs(By.cssSelector: #checkboxes input).last(com.spring.hibernate.test.AngularAndWebDriverTest$IsIndex2Or3@15f47664)
+	at org.seleniumhq.selenium.fluent.Internal$BaseFluentWebDriver.wrapRuntimeException(Internal.java:1007)
+	at org.seleniumhq.selenium.fluent.Internal$BaseFluentWebDriver.executeAndWrapReThrowIfNeeded(Internal.java:1037)
+	at org.seleniumhq.selenium.fluent.FluentWebElements.executeAndWrapReThrowIfNeeded(FluentWebElements.java:53)
+	at org.seleniumhq.selenium.fluent.FluentWebElements.last(FluentWebElements.java:162)
+	at com.spring.hibernate.test.AngularAndWebDriverTest.basic_elements_should_chain_with_index_correctly(AngularAndWebDriverTest.java:527)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:104)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:645)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:851)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1177)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:756)
+	at org.testng.TestRunner.run(TestRunner.java:610)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:382)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1293)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1218)
+	at org.testng.TestNG.runSuites(TestNG.java:1133)
+	at org.testng.TestNG.run(TestNG.java:1104)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:230)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:76)
+</pre></div><a href='#' onClick='toggleBox("stack-trace231311211", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace231311211'><pre>org.seleniumhq.selenium.fluent.FluentExecutionStopped$BecauseNothingMatchesInFilter: Nothing matched filter, during invocation of: ?.inputs(By.cssSelector: #checkboxes input).last(com.spring.hibernate.test.AngularAndWebDriverTest$IsIndex2Or3@15f47664)
+	at org.seleniumhq.selenium.fluent.Internal$BaseFluentWebDriver.wrapRuntimeException(Internal.java:1007)
+	at org.seleniumhq.selenium.fluent.Internal$BaseFluentWebDriver.executeAndWrapReThrowIfNeeded(Internal.java:1037)
+	at org.seleniumhq.selenium.fluent.FluentWebElements.executeAndWrapReThrowIfNeeded(FluentWebElements.java:53)
+	at org.seleniumhq.selenium.fluent.FluentWebElements.last(FluentWebElements.java:162)
+	at com.spring.hibernate.test.AngularAndWebDriverTest.basic_elements_should_chain_with_index_correctly(AngularAndWebDriverTest.java:527)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:104)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:645)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:851)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1177)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:756)
+	at org.testng.TestRunner.run(TestRunner.java:610)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:382)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1293)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1218)
+	at org.testng.TestNG.runSuites(TestNG.java:1133)
+	at org.testng.TestNG.run(TestNG.java:1104)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:230)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:76)
+</pre></div></td>
+<td>2</td>
+<td>com.spring.hibernate.test.AngularAndWebDriverTest@56ac3a89</td></tr>
+<tr>
+<td title='com.spring.hibernate.test.AngularAndWebDriverTest.basic_lib_getLocationAbsUrl_gets_url()'><b>basic_lib_getLocationAbsUrl_gets_url</b><br>Test class: com.spring.hibernate.test.AngularAndWebDriverTest</td>
+<td><div><pre>org.openqa.selenium.WebDriverException: unknown error: angular is not defined
+  (Session info: chrome=56.0.2924.87)
+  (Driver info: chromedriver=2.27.440174 (e97a722caafc2d3a8b807ee115bfb307f7d2cfd9),platform=Windows NT 6.1.7601 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 10 milliseconds
+Build info: version: &apos;unknown&apos;, revision: &apos;86a5d70&apos;, time: &apos;2017-02-16 07:47:51 -0800&apos;
+System info: host: &apos;LINMB550&apos;, ip: &apos;10.207.163.101&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_121&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.27.440174 (e97a722caafc2d3a8b807ee115bfb307f7d2cfd9), userDataDir=C:\Users\ankurcha\AppData\Local\Temp\scoped_dir9152_16605}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=56.0.2924.87, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
+Session ID: aa924b649118224faa55c86f351d5221
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:216)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:168)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:635)
+	at org.openqa.selenium.remote.RemoteWebDriver.executeScript(RemoteWebDriver.java:537)
+	at com.spring.hibernate.ngwebdriver.NgWebDriver.getLocationAbsUrl(NgWebDriver.java:90)
+	at com.spring.hibernate.test.AngularAndWebDriverTest.basic_lib_getLocationAbsUrl_gets_url(AngularAndWebDriverTest.java:730)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:104)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:645)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:851)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1177)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:756)
+	at org.testng.TestRunner.run(TestRunner.java:610)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:382)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1293)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1218)
+	at org.testng.TestNG.runSuites(TestNG.java:1133)
+	at org.testng.TestNG.run(TestNG.java:1104)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:230)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:76)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1975873209", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1975873209'><pre>org.openqa.selenium.WebDriverException: unknown error: angular is not defined
+  (Session info: chrome=56.0.2924.87)
+  (Driver info: chromedriver=2.27.440174 (e97a722caafc2d3a8b807ee115bfb307f7d2cfd9),platform=Windows NT 6.1.7601 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 10 milliseconds
+Build info: version: &apos;unknown&apos;, revision: &apos;86a5d70&apos;, time: &apos;2017-02-16 07:47:51 -0800&apos;
+System info: host: &apos;LINMB550&apos;, ip: &apos;10.207.163.101&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_121&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.27.440174 (e97a722caafc2d3a8b807ee115bfb307f7d2cfd9), userDataDir=C:\Users\ankurcha\AppData\Local\Temp\scoped_dir9152_16605}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=56.0.2924.87, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
+Session ID: aa924b649118224faa55c86f351d5221
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:216)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:168)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:635)
+	at org.openqa.selenium.remote.RemoteWebDriver.executeScript(RemoteWebDriver.java:537)
+	at com.spring.hibernate.ngwebdriver.NgWebDriver.getLocationAbsUrl(NgWebDriver.java:90)
+	at com.spring.hibernate.test.AngularAndWebDriverTest.basic_lib_getLocationAbsUrl_gets_url(AngularAndWebDriverTest.java:730)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:104)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:645)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:851)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1177)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:756)
+	at org.testng.TestRunner.run(TestRunner.java:610)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:382)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1293)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1218)
+	at org.testng.TestNG.runSuites(TestNG.java:1133)
+	at org.testng.TestNG.run(TestNG.java:1104)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:230)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:76)
+</pre></div></td>
+<td>0</td>
+<td>com.spring.hibernate.test.AngularAndWebDriverTest@56ac3a89</td></tr>
+<tr>
+<td title='com.spring.hibernate.test.AngularAndWebDriverTest.basic_locators_by_repeater_should_find_by_partial_match()'><b>basic_locators_by_repeater_should_find_by_partial_match</b><br>Test class: com.spring.hibernate.test.AngularAndWebDriverTest</td>
+<td><div><pre>org.seleniumhq.selenium.fluent.FluentExecutionStopped: NoSuchElementException during invocation of: ?.span(repeater(baz in days | filter:&apos;T&apos;).row(0).column(baz.initial))
+	at org.seleniumhq.selenium.fluent.Internal$BaseFluentWebDriver.wrapRuntimeException(Internal.java:1009)
+	at org.seleniumhq.selenium.fluent.Internal$BaseFluentWebDriver.executeAndWrapReThrowIfNeeded(Internal.java:1037)
+	at org.seleniumhq.selenium.fluent.Internal$BaseFluentWebDriver.single(Internal.java:886)
+	at org.seleniumhq.selenium.fluent.Internal$BaseFluentWebDriver.span(Internal.java:105)
+	at org.seleniumhq.selenium.fluent.FluentWebDriver.span(FluentWebDriver.java:116)
+	at com.spring.hibernate.test.AngularAndWebDriverTest.basic_locators_by_repeater_should_find_by_partial_match(AngularAndWebDriverTest.java:594)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:104)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:645)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:851)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1177)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:756)
+	at org.testng.TestRunner.run(TestRunner.java:610)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:382)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1293)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1218)
+	at org.testng.TestNG.runSuites(TestNG.java:1133)
+	at org.testng.TestNG.run(TestNG.java:1104)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:230)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:76)
+Caused by: org.openqa.selenium.NoSuchElementException: repeater(baz in days | filter:&apos;T&apos;).row(0).column(baz.initial) didn&apos;t have any matching elements at this place in the DOM
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;unknown&apos;, revision: &apos;86a5d70&apos;, time: &apos;2017-02-16 07:47:51 -0800&apos;
+System info: host: &apos;LINMB550&apos;, ip: &apos;10.207.163.101&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_121&apos;
+Driver info: driver.version: FluentWebDriver
+	at com.spring.hibernate.ngwebdriver.ByAngular$BaseBy.errorIfNull(ByAngular.java:155)
+	at com.spring.hibernate.ngwebdriver.ByAngular$BaseBy.findElement(ByAngular.java:166)
+	at com.spring.hibernate.ngwebdriver.ByAngularRepeaterCell.findElement(ByAngularRepeaterCell.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:360)
+	at org.seleniumhq.selenium.fluent.FluentWebDriver.actualFindElement(FluentWebDriver.java:63)
+	at org.seleniumhq.selenium.fluent.FluentWebDriver.findElement(FluentWebDriver.java:53)
+	at org.seleniumhq.selenium.fluent.Internal$BaseFluentWebDriver$FindElement.execute(Internal.java:933)
+	at org.seleniumhq.selenium.fluent.Internal$BaseFluentWebDriver$FindElement.execute(Internal.java:911)
+	at org.seleniumhq.selenium.fluent.internal.Execution.doExecution(Execution.java:39)
+	at org.seleniumhq.selenium.fluent.Internal$BaseFluentWebDriver.executeAndWrapReThrowIfNeeded(Internal.java:1031)
+	... 29 more
+</pre></div><a href='#' onClick='toggleBox("stack-trace1457263953", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1457263953'><pre>org.seleniumhq.selenium.fluent.FluentExecutionStopped: NoSuchElementException during invocation of: ?.span(repeater(baz in days | filter:&apos;T&apos;).row(0).column(baz.initial))
+	at org.seleniumhq.selenium.fluent.Internal$BaseFluentWebDriver.wrapRuntimeException(Internal.java:1009)
+	at org.seleniumhq.selenium.fluent.Internal$BaseFluentWebDriver.executeAndWrapReThrowIfNeeded(Internal.java:1037)
+	at org.seleniumhq.selenium.fluent.Internal$BaseFluentWebDriver.single(Internal.java:886)
+	at org.seleniumhq.selenium.fluent.Internal$BaseFluentWebDriver.span(Internal.java:105)
+	at org.seleniumhq.selenium.fluent.FluentWebDriver.span(FluentWebDriver.java:116)
+	at com.spring.hibernate.test.AngularAndWebDriverTest.basic_locators_by_repeater_should_find_by_partial_match(AngularAndWebDriverTest.java:594)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:104)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:645)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:851)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1177)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:756)
+	at org.testng.TestRunner.run(TestRunner.java:610)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:382)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1293)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1218)
+	at org.testng.TestNG.runSuites(TestNG.java:1133)
+	at org.testng.TestNG.run(TestNG.java:1104)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:230)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:76)
+Caused by: org.openqa.selenium.NoSuchElementException: repeater(baz in days | filter:&apos;T&apos;).row(0).column(baz.initial) didn&apos;t have any matching elements at this place in the DOM
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;unknown&apos;, revision: &apos;86a5d70&apos;, time: &apos;2017-02-16 07:47:51 -0800&apos;
+System info: host: &apos;LINMB550&apos;, ip: &apos;10.207.163.101&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_121&apos;
+Driver info: driver.version: FluentWebDriver
+	at com.spring.hibernate.ngwebdriver.ByAngular$BaseBy.errorIfNull(ByAngular.java:155)
+	at com.spring.hibernate.ngwebdriver.ByAngular$BaseBy.findElement(ByAngular.java:166)
+	at com.spring.hibernate.ngwebdriver.ByAngularRepeaterCell.findElement(ByAngularRepeaterCell.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:360)
+	at org.seleniumhq.selenium.fluent.FluentWebDriver.actualFindElement(FluentWebDriver.java:63)
+	at org.seleniumhq.selenium.fluent.FluentWebDriver.findElement(FluentWebDriver.java:53)
+	at org.seleniumhq.selenium.fluent.Internal$BaseFluentWebDriver$FindElement.execute(Internal.java:933)
+	at org.seleniumhq.selenium.fluent.Internal$BaseFluentWebDriver$FindElement.execute(Internal.java:911)
+	at org.seleniumhq.selenium.fluent.internal.Execution.doExecution(Execution.java:39)
+	at org.seleniumhq.selenium.fluent.Internal$BaseFluentWebDriver.executeAndWrapReThrowIfNeeded(Internal.java:1031)
+	... 29 more
+</pre></div></td>
+<td>1</td>
+<td>com.spring.hibernate.test.AngularAndWebDriverTest@56ac3a89</td></tr>
+<tr>
+<td title='com.spring.hibernate.test.AngularAndWebDriverTest.basic_locators_by_repeater_should_find_many_rows_by_partial_match()'><b>basic_locators_by_repeater_should_find_many_rows_by_partial_match</b><br>Test class: com.spring.hibernate.test.AngularAndWebDriverTest</td>
+<td><div><pre>org.seleniumhq.selenium.fluent.FluentExecutionStopped: NoSuchElementException during invocation of: ?.spans(repeater(baz in days | filter:&apos;T&apos;).column(baz.initial))
+	at org.seleniumhq.selenium.fluent.Internal$BaseFluentWebDriver.wrapRuntimeException(Internal.java:1009)
+	at org.seleniumhq.selenium.fluent.Internal$BaseFluentWebDriver.executeAndWrapReThrowIfNeeded(Internal.java:1037)
+	at org.seleniumhq.selenium.fluent.Internal$BaseFluentWebDriver.multiple(Internal.java:956)
+	at org.seleniumhq.selenium.fluent.Internal$BaseFluentWebDriver.spans(Internal.java:114)
+	at org.seleniumhq.selenium.fluent.FluentWebDriver.spans(FluentWebDriver.java:126)
+	at com.spring.hibernate.test.AngularAndWebDriverTest.basic_locators_by_repeater_should_find_many_rows_by_partial_match(AngularAndWebDriverTest.java:618)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:104)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:645)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:851)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1177)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:756)
+	at org.testng.TestRunner.run(TestRunner.java:610)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:382)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1293)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1218)
+	at org.testng.TestNG.runSuites(TestNG.java:1133)
+	at org.testng.TestNG.run(TestNG.java:1104)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:230)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:76)
+Caused by: org.openqa.selenium.NoSuchElementException: repeater(baz in days | filter:&apos;T&apos;).column(baz.initial) didn&apos;t have any matching elements at this place in the DOM
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;unknown&apos;, revision: &apos;86a5d70&apos;, time: &apos;2017-02-16 07:47:51 -0800&apos;
+System info: host: &apos;LINMB550&apos;, ip: &apos;10.207.163.101&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_121&apos;
+Driver info: driver.version: FluentWebDriver
+	at com.spring.hibernate.ngwebdriver.ByAngular$BaseBy.errorIfNull(ByAngular.java:155)
+	at com.spring.hibernate.ngwebdriver.ByAngular$BaseBy.findElements(ByAngular.java:177)
+	at com.spring.hibernate.ngwebdriver.ByAngularRepeaterColumn.findElements(ByAngularRepeaterColumn.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:356)
+	at org.seleniumhq.selenium.fluent.FluentWebDriver.actualFindElements(FluentWebDriver.java:68)
+	at org.seleniumhq.selenium.fluent.FluentWebDriver.findElements(FluentWebDriver.java:58)
+	at org.seleniumhq.selenium.fluent.Internal$BaseFluentWebDriver$FindElements.execute(Internal.java:992)
+	at org.seleniumhq.selenium.fluent.Internal$BaseFluentWebDriver$FindElements.execute(Internal.java:980)
+	at org.seleniumhq.selenium.fluent.internal.Execution.doExecution(Execution.java:39)
+	at org.seleniumhq.selenium.fluent.Internal$BaseFluentWebDriver.executeAndWrapReThrowIfNeeded(Internal.java:1031)
+	... 29 more
+</pre></div><a href='#' onClick='toggleBox("stack-trace1270836494", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1270836494'><pre>org.seleniumhq.selenium.fluent.FluentExecutionStopped: NoSuchElementException during invocation of: ?.spans(repeater(baz in days | filter:&apos;T&apos;).column(baz.initial))
+	at org.seleniumhq.selenium.fluent.Internal$BaseFluentWebDriver.wrapRuntimeException(Internal.java:1009)
+	at org.seleniumhq.selenium.fluent.Internal$BaseFluentWebDriver.executeAndWrapReThrowIfNeeded(Internal.java:1037)
+	at org.seleniumhq.selenium.fluent.Internal$BaseFluentWebDriver.multiple(Internal.java:956)
+	at org.seleniumhq.selenium.fluent.Internal$BaseFluentWebDriver.spans(Internal.java:114)
+	at org.seleniumhq.selenium.fluent.FluentWebDriver.spans(FluentWebDriver.java:126)
+	at com.spring.hibernate.test.AngularAndWebDriverTest.basic_locators_by_repeater_should_find_many_rows_by_partial_match(AngularAndWebDriverTest.java:618)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:104)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:645)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:851)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1177)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:756)
+	at org.testng.TestRunner.run(TestRunner.java:610)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:382)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1293)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1218)
+	at org.testng.TestNG.runSuites(TestNG.java:1133)
+	at org.testng.TestNG.run(TestNG.java:1104)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:230)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:76)
+Caused by: org.openqa.selenium.NoSuchElementException: repeater(baz in days | filter:&apos;T&apos;).column(baz.initial) didn&apos;t have any matching elements at this place in the DOM
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;unknown&apos;, revision: &apos;86a5d70&apos;, time: &apos;2017-02-16 07:47:51 -0800&apos;
+System info: host: &apos;LINMB550&apos;, ip: &apos;10.207.163.101&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_121&apos;
+Driver info: driver.version: FluentWebDriver
+	at com.spring.hibernate.ngwebdriver.ByAngular$BaseBy.errorIfNull(ByAngular.java:155)
+	at com.spring.hibernate.ngwebdriver.ByAngular$BaseBy.findElements(ByAngular.java:177)
+	at com.spring.hibernate.ngwebdriver.ByAngularRepeaterColumn.findElements(ByAngularRepeaterColumn.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:356)
+	at org.seleniumhq.selenium.fluent.FluentWebDriver.actualFindElements(FluentWebDriver.java:68)
+	at org.seleniumhq.selenium.fluent.FluentWebDriver.findElements(FluentWebDriver.java:58)
+	at org.seleniumhq.selenium.fluent.Internal$BaseFluentWebDriver$FindElements.execute(Internal.java:992)
+	at org.seleniumhq.selenium.fluent.Internal$BaseFluentWebDriver$FindElements.execute(Internal.java:980)
+	at org.seleniumhq.selenium.fluent.internal.Execution.doExecution(Execution.java:39)
+	at org.seleniumhq.selenium.fluent.Internal$BaseFluentWebDriver.executeAndWrapReThrowIfNeeded(Internal.java:1031)
+	... 29 more
+</pre></div></td>
+<td>0</td>
+<td>com.spring.hibernate.test.AngularAndWebDriverTest@56ac3a89</td></tr>
+<tr>
+<td title='com.spring.hibernate.test.AngularAndWebDriverTest.basic_locators_by_repeater_should_find_many_rows_by_partial_match2()'><b>basic_locators_by_repeater_should_find_many_rows_by_partial_match2</b><br>Test class: com.spring.hibernate.test.AngularAndWebDriverTest</td>
+<td><div><pre>org.seleniumhq.selenium.fluent.FluentExecutionStopped: NoSuchElementException during invocation of: ?.lis(repeater(baz in days | filter:&apos;T&apos;))
+	at org.seleniumhq.selenium.fluent.Internal$BaseFluentWebDriver.wrapRuntimeException(Internal.java:1009)
+	at org.seleniumhq.selenium.fluent.Internal$BaseFluentWebDriver.executeAndWrapReThrowIfNeeded(Internal.java:1037)
+	at org.seleniumhq.selenium.fluent.Internal$BaseFluentWebDriver.multiple(Internal.java:956)
+	at org.seleniumhq.selenium.fluent.Internal$BaseFluentWebDriver.lis(Internal.java:815)
+	at org.seleniumhq.selenium.fluent.FluentWebDriver.lis(FluentWebDriver.java:903)
+	at com.spring.hibernate.test.AngularAndWebDriverTest.basic_locators_by_repeater_should_find_many_rows_by_partial_match2(AngularAndWebDriverTest.java:675)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:104)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:645)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:851)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1177)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:756)
+	at org.testng.TestRunner.run(TestRunner.java:610)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:382)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1293)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1218)
+	at org.testng.TestNG.runSuites(TestNG.java:1133)
+	at org.testng.TestNG.run(TestNG.java:1104)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:230)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:76)
+Caused by: org.openqa.selenium.NoSuchElementException: repeater(baz in days | filter:&apos;T&apos;) didn&apos;t have any matching elements at this place in the DOM
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;unknown&apos;, revision: &apos;86a5d70&apos;, time: &apos;2017-02-16 07:47:51 -0800&apos;
+System info: host: &apos;LINMB550&apos;, ip: &apos;10.207.163.101&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_121&apos;
+Driver info: driver.version: FluentWebDriver
+	at com.spring.hibernate.ngwebdriver.ByAngular$BaseBy.errorIfNull(ByAngular.java:155)
+	at com.spring.hibernate.ngwebdriver.ByAngular$BaseBy.findElements(ByAngular.java:177)
+	at com.spring.hibernate.ngwebdriver.ByAngularRepeater.findElements(ByAngularRepeater.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:356)
+	at org.seleniumhq.selenium.fluent.FluentWebDriver.actualFindElements(FluentWebDriver.java:68)
+	at org.seleniumhq.selenium.fluent.FluentWebDriver.findElements(FluentWebDriver.java:58)
+	at org.seleniumhq.selenium.fluent.Internal$BaseFluentWebDriver$FindElements.execute(Internal.java:992)
+	at org.seleniumhq.selenium.fluent.Internal$BaseFluentWebDriver$FindElements.execute(Internal.java:980)
+	at org.seleniumhq.selenium.fluent.internal.Execution.doExecution(Execution.java:39)
+	at org.seleniumhq.selenium.fluent.Internal$BaseFluentWebDriver.executeAndWrapReThrowIfNeeded(Internal.java:1031)
+	... 29 more
+</pre></div><a href='#' onClick='toggleBox("stack-trace154173878", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace154173878'><pre>org.seleniumhq.selenium.fluent.FluentExecutionStopped: NoSuchElementException during invocation of: ?.lis(repeater(baz in days | filter:&apos;T&apos;))
+	at org.seleniumhq.selenium.fluent.Internal$BaseFluentWebDriver.wrapRuntimeException(Internal.java:1009)
+	at org.seleniumhq.selenium.fluent.Internal$BaseFluentWebDriver.executeAndWrapReThrowIfNeeded(Internal.java:1037)
+	at org.seleniumhq.selenium.fluent.Internal$BaseFluentWebDriver.multiple(Internal.java:956)
+	at org.seleniumhq.selenium.fluent.Internal$BaseFluentWebDriver.lis(Internal.java:815)
+	at org.seleniumhq.selenium.fluent.FluentWebDriver.lis(FluentWebDriver.java:903)
+	at com.spring.hibernate.test.AngularAndWebDriverTest.basic_locators_by_repeater_should_find_many_rows_by_partial_match2(AngularAndWebDriverTest.java:675)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:104)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:645)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:851)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1177)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:756)
+	at org.testng.TestRunner.run(TestRunner.java:610)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:382)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1293)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1218)
+	at org.testng.TestNG.runSuites(TestNG.java:1133)
+	at org.testng.TestNG.run(TestNG.java:1104)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:230)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:76)
+Caused by: org.openqa.selenium.NoSuchElementException: repeater(baz in days | filter:&apos;T&apos;) didn&apos;t have any matching elements at this place in the DOM
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;unknown&apos;, revision: &apos;86a5d70&apos;, time: &apos;2017-02-16 07:47:51 -0800&apos;
+System info: host: &apos;LINMB550&apos;, ip: &apos;10.207.163.101&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_121&apos;
+Driver info: driver.version: FluentWebDriver
+	at com.spring.hibernate.ngwebdriver.ByAngular$BaseBy.errorIfNull(ByAngular.java:155)
+	at com.spring.hibernate.ngwebdriver.ByAngular$BaseBy.findElements(ByAngular.java:177)
+	at com.spring.hibernate.ngwebdriver.ByAngularRepeater.findElements(ByAngularRepeater.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:356)
+	at org.seleniumhq.selenium.fluent.FluentWebDriver.actualFindElements(FluentWebDriver.java:68)
+	at org.seleniumhq.selenium.fluent.FluentWebDriver.findElements(FluentWebDriver.java:58)
+	at org.seleniumhq.selenium.fluent.Internal$BaseFluentWebDriver$FindElements.execute(Internal.java:992)
+	at org.seleniumhq.selenium.fluent.Internal$BaseFluentWebDriver$FindElements.execute(Internal.java:980)
+	at org.seleniumhq.selenium.fluent.internal.Execution.doExecution(Execution.java:39)
+	at org.seleniumhq.selenium.fluent.Internal$BaseFluentWebDriver.executeAndWrapReThrowIfNeeded(Internal.java:1031)
+	... 29 more
+</pre></div></td>
+<td>1</td>
+<td>com.spring.hibernate.test.AngularAndWebDriverTest@56ac3a89</td></tr>
+<tr>
+<td title='com.spring.hibernate.test.AngularAndWebDriverTest.basic_locators_by_repeater_should_find_one_row_by_partial_match()'><b>basic_locators_by_repeater_should_find_one_row_by_partial_match</b><br>Test class: com.spring.hibernate.test.AngularAndWebDriverTest</td>
+<td><div><pre>org.seleniumhq.selenium.fluent.FluentExecutionStopped: NoSuchElementException during invocation of: ?.li(repeater(baz in days | filter:&apos;T&apos;).row(0))
+	at org.seleniumhq.selenium.fluent.Internal$BaseFluentWebDriver.wrapRuntimeException(Internal.java:1009)
+	at org.seleniumhq.selenium.fluent.Internal$BaseFluentWebDriver.executeAndWrapReThrowIfNeeded(Internal.java:1037)
+	at org.seleniumhq.selenium.fluent.Internal$BaseFluentWebDriver.single(Internal.java:886)
+	at org.seleniumhq.selenium.fluent.Internal$BaseFluentWebDriver.li(Internal.java:806)
+	at org.seleniumhq.selenium.fluent.FluentWebDriver.li(FluentWebDriver.java:893)
+	at com.spring.hibernate.test.AngularAndWebDriverTest.basic_locators_by_repeater_should_find_one_row_by_partial_match(AngularAndWebDriverTest.java:649)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:104)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:645)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:851)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1177)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:756)
+	at org.testng.TestRunner.run(TestRunner.java:610)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:382)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1293)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1218)
+	at org.testng.TestNG.runSuites(TestNG.java:1133)
+	at org.testng.TestNG.run(TestNG.java:1104)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:230)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:76)
+Caused by: org.openqa.selenium.NoSuchElementException: repeater(baz in days | filter:&apos;T&apos;).row(0) didn&apos;t have any matching elements at this place in the DOM
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;unknown&apos;, revision: &apos;86a5d70&apos;, time: &apos;2017-02-16 07:47:51 -0800&apos;
+System info: host: &apos;LINMB550&apos;, ip: &apos;10.207.163.101&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_121&apos;
+Driver info: driver.version: FluentWebDriver
+	at com.spring.hibernate.ngwebdriver.ByAngular$BaseBy.errorIfNull(ByAngular.java:155)
+	at com.spring.hibernate.ngwebdriver.ByAngular$BaseBy.findElement(ByAngular.java:166)
+	at com.spring.hibernate.ngwebdriver.ByAngularRepeaterRow.findElement(ByAngularRepeaterRow.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:360)
+	at org.seleniumhq.selenium.fluent.FluentWebDriver.actualFindElement(FluentWebDriver.java:63)
+	at org.seleniumhq.selenium.fluent.FluentWebDriver.findElement(FluentWebDriver.java:53)
+	at org.seleniumhq.selenium.fluent.Internal$BaseFluentWebDriver$FindElement.execute(Internal.java:933)
+	at org.seleniumhq.selenium.fluent.Internal$BaseFluentWebDriver$FindElement.execute(Internal.java:911)
+	at org.seleniumhq.selenium.fluent.internal.Execution.doExecution(Execution.java:39)
+	at org.seleniumhq.selenium.fluent.Internal$BaseFluentWebDriver.executeAndWrapReThrowIfNeeded(Internal.java:1031)
+	... 29 more
+</pre></div><a href='#' onClick='toggleBox("stack-trace837659261", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace837659261'><pre>org.seleniumhq.selenium.fluent.FluentExecutionStopped: NoSuchElementException during invocation of: ?.li(repeater(baz in days | filter:&apos;T&apos;).row(0))
+	at org.seleniumhq.selenium.fluent.Internal$BaseFluentWebDriver.wrapRuntimeException(Internal.java:1009)
+	at org.seleniumhq.selenium.fluent.Internal$BaseFluentWebDriver.executeAndWrapReThrowIfNeeded(Internal.java:1037)
+	at org.seleniumhq.selenium.fluent.Internal$BaseFluentWebDriver.single(Internal.java:886)
+	at org.seleniumhq.selenium.fluent.Internal$BaseFluentWebDriver.li(Internal.java:806)
+	at org.seleniumhq.selenium.fluent.FluentWebDriver.li(FluentWebDriver.java:893)
+	at com.spring.hibernate.test.AngularAndWebDriverTest.basic_locators_by_repeater_should_find_one_row_by_partial_match(AngularAndWebDriverTest.java:649)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:104)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:645)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:851)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1177)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:756)
+	at org.testng.TestRunner.run(TestRunner.java:610)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:382)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1293)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1218)
+	at org.testng.TestNG.runSuites(TestNG.java:1133)
+	at org.testng.TestNG.run(TestNG.java:1104)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:230)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:76)
+Caused by: org.openqa.selenium.NoSuchElementException: repeater(baz in days | filter:&apos;T&apos;).row(0) didn&apos;t have any matching elements at this place in the DOM
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;unknown&apos;, revision: &apos;86a5d70&apos;, time: &apos;2017-02-16 07:47:51 -0800&apos;
+System info: host: &apos;LINMB550&apos;, ip: &apos;10.207.163.101&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_121&apos;
+Driver info: driver.version: FluentWebDriver
+	at com.spring.hibernate.ngwebdriver.ByAngular$BaseBy.errorIfNull(ByAngular.java:155)
+	at com.spring.hibernate.ngwebdriver.ByAngular$BaseBy.findElement(ByAngular.java:166)
+	at com.spring.hibernate.ngwebdriver.ByAngularRepeaterRow.findElement(ByAngularRepeaterRow.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:360)
+	at org.seleniumhq.selenium.fluent.FluentWebDriver.actualFindElement(FluentWebDriver.java:63)
+	at org.seleniumhq.selenium.fluent.FluentWebDriver.findElement(FluentWebDriver.java:53)
+	at org.seleniumhq.selenium.fluent.Internal$BaseFluentWebDriver$FindElement.execute(Internal.java:933)
+	at org.seleniumhq.selenium.fluent.Internal$BaseFluentWebDriver$FindElement.execute(Internal.java:911)
+	at org.seleniumhq.selenium.fluent.internal.Execution.doExecution(Execution.java:39)
+	at org.seleniumhq.selenium.fluent.Internal$BaseFluentWebDriver.executeAndWrapReThrowIfNeeded(Internal.java:1031)
+	... 29 more
+</pre></div></td>
+<td>0</td>
+<td>com.spring.hibernate.test.AngularAndWebDriverTest@56ac3a89</td></tr>
+<tr>
+<td title='com.spring.hibernate.test.AngularAndWebDriverTest.basic_locators_by_repeater_should_find_single_rows_by_partial_match()'><b>basic_locators_by_repeater_should_find_single_rows_by_partial_match</b><br>Test class: com.spring.hibernate.test.AngularAndWebDriverTest</td>
+<td><div><pre>org.seleniumhq.selenium.fluent.FluentExecutionStopped: NoSuchElementException during invocation of: ?.li(repeater(baz in days | filter:&apos;T&apos;))
+	at org.seleniumhq.selenium.fluent.Internal$BaseFluentWebDriver.wrapRuntimeException(Internal.java:1009)
+	at org.seleniumhq.selenium.fluent.Internal$BaseFluentWebDriver.executeAndWrapReThrowIfNeeded(Internal.java:1037)
+	at org.seleniumhq.selenium.fluent.Internal$BaseFluentWebDriver.single(Internal.java:886)
+	at org.seleniumhq.selenium.fluent.Internal$BaseFluentWebDriver.li(Internal.java:806)
+	at org.seleniumhq.selenium.fluent.FluentWebDriver.li(FluentWebDriver.java:893)
+	at com.spring.hibernate.test.AngularAndWebDriverTest.basic_locators_by_repeater_should_find_single_rows_by_partial_match(AngularAndWebDriverTest.java:706)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:104)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:645)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:851)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1177)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:756)
+	at org.testng.TestRunner.run(TestRunner.java:610)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:382)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1293)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1218)
+	at org.testng.TestNG.runSuites(TestNG.java:1133)
+	at org.testng.TestNG.run(TestNG.java:1104)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:230)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:76)
+Caused by: org.openqa.selenium.NoSuchElementException: repeater(baz in days | filter:&apos;T&apos;) didn&apos;t have any matching elements at this place in the DOM
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;unknown&apos;, revision: &apos;86a5d70&apos;, time: &apos;2017-02-16 07:47:51 -0800&apos;
+System info: host: &apos;LINMB550&apos;, ip: &apos;10.207.163.101&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_121&apos;
+Driver info: driver.version: FluentWebDriver
+	at com.spring.hibernate.ngwebdriver.ByAngular$BaseBy.errorIfNull(ByAngular.java:155)
+	at com.spring.hibernate.ngwebdriver.ByAngular$BaseBy.findElement(ByAngular.java:166)
+	at com.spring.hibernate.ngwebdriver.ByAngularRepeater.findElement(ByAngularRepeater.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:360)
+	at org.seleniumhq.selenium.fluent.FluentWebDriver.actualFindElement(FluentWebDriver.java:63)
+	at org.seleniumhq.selenium.fluent.FluentWebDriver.findElement(FluentWebDriver.java:53)
+	at org.seleniumhq.selenium.fluent.Internal$BaseFluentWebDriver$FindElement.execute(Internal.java:933)
+	at org.seleniumhq.selenium.fluent.Internal$BaseFluentWebDriver$FindElement.execute(Internal.java:911)
+	at org.seleniumhq.selenium.fluent.internal.Execution.doExecution(Execution.java:39)
+	at org.seleniumhq.selenium.fluent.Internal$BaseFluentWebDriver.executeAndWrapReThrowIfNeeded(Internal.java:1031)
+	... 29 more
+</pre></div><a href='#' onClick='toggleBox("stack-trace1865516976", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1865516976'><pre>org.seleniumhq.selenium.fluent.FluentExecutionStopped: NoSuchElementException during invocation of: ?.li(repeater(baz in days | filter:&apos;T&apos;))
+	at org.seleniumhq.selenium.fluent.Internal$BaseFluentWebDriver.wrapRuntimeException(Internal.java:1009)
+	at org.seleniumhq.selenium.fluent.Internal$BaseFluentWebDriver.executeAndWrapReThrowIfNeeded(Internal.java:1037)
+	at org.seleniumhq.selenium.fluent.Internal$BaseFluentWebDriver.single(Internal.java:886)
+	at org.seleniumhq.selenium.fluent.Internal$BaseFluentWebDriver.li(Internal.java:806)
+	at org.seleniumhq.selenium.fluent.FluentWebDriver.li(FluentWebDriver.java:893)
+	at com.spring.hibernate.test.AngularAndWebDriverTest.basic_locators_by_repeater_should_find_single_rows_by_partial_match(AngularAndWebDriverTest.java:706)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:104)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:645)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:851)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1177)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:756)
+	at org.testng.TestRunner.run(TestRunner.java:610)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:382)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1293)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1218)
+	at org.testng.TestNG.runSuites(TestNG.java:1133)
+	at org.testng.TestNG.run(TestNG.java:1104)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:230)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:76)
+Caused by: org.openqa.selenium.NoSuchElementException: repeater(baz in days | filter:&apos;T&apos;) didn&apos;t have any matching elements at this place in the DOM
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;unknown&apos;, revision: &apos;86a5d70&apos;, time: &apos;2017-02-16 07:47:51 -0800&apos;
+System info: host: &apos;LINMB550&apos;, ip: &apos;10.207.163.101&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_121&apos;
+Driver info: driver.version: FluentWebDriver
+	at com.spring.hibernate.ngwebdriver.ByAngular$BaseBy.errorIfNull(ByAngular.java:155)
+	at com.spring.hibernate.ngwebdriver.ByAngular$BaseBy.findElement(ByAngular.java:166)
+	at com.spring.hibernate.ngwebdriver.ByAngularRepeater.findElement(ByAngularRepeater.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:360)
+	at org.seleniumhq.selenium.fluent.FluentWebDriver.actualFindElement(FluentWebDriver.java:63)
+	at org.seleniumhq.selenium.fluent.FluentWebDriver.findElement(FluentWebDriver.java:53)
+	at org.seleniumhq.selenium.fluent.Internal$BaseFluentWebDriver$FindElement.execute(Internal.java:933)
+	at org.seleniumhq.selenium.fluent.Internal$BaseFluentWebDriver$FindElement.execute(Internal.java:911)
+	at org.seleniumhq.selenium.fluent.internal.Execution.doExecution(Execution.java:39)
+	at org.seleniumhq.selenium.fluent.Internal$BaseFluentWebDriver.executeAndWrapReThrowIfNeeded(Internal.java:1031)
+	... 29 more
+</pre></div></td>
+<td>1</td>
+<td>com.spring.hibernate.test.AngularAndWebDriverTest@56ac3a89</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.spring.hibernate.test.AngularAndWebDriverTest.findElement_should_barf_when_element_not_in_the_dom()'><b>findElement_should_barf_when_element_not_in_the_dom</b><br>Test class: com.spring.hibernate.test.AngularAndWebDriverTest</td>
+<td></td>
+<td>3</td>
+<td>com.spring.hibernate.test.AngularAndWebDriverTest@56ac3a89</td></tr>
+<tr>
+<td title='com.spring.hibernate.test.AngularAndWebDriverTest.findElement_should_barf_with_message_for_bad_repeater()'><b>findElement_should_barf_with_message_for_bad_repeater</b><br>Test class: com.spring.hibernate.test.AngularAndWebDriverTest</td>
+<td></td>
+<td>0</td>
+<td>com.spring.hibernate.test.AngularAndWebDriverTest@56ac3a89</td></tr>
+<tr>
+<td title='com.spring.hibernate.test.AngularAndWebDriverTest.findElement_should_barf_with_message_for_bad_repeater_and_row()'><b>findElement_should_barf_with_message_for_bad_repeater_and_row</b><br>Test class: com.spring.hibernate.test.AngularAndWebDriverTest</td>
+<td></td>
+<td>0</td>
+<td>com.spring.hibernate.test.AngularAndWebDriverTest@56ac3a89</td></tr>
+<tr>
+<td title='com.spring.hibernate.test.AngularAndWebDriverTest.findElement_should_barf_with_message_for_bad_repeater_and_row_and_column()'><b>findElement_should_barf_with_message_for_bad_repeater_and_row_and_column</b><br>Test class: com.spring.hibernate.test.AngularAndWebDriverTest</td>
+<td></td>
+<td>0</td>
+<td>com.spring.hibernate.test.AngularAndWebDriverTest@56ac3a89</td></tr>
+<tr>
+<td title='com.spring.hibernate.test.AngularAndWebDriverTest.findElements_should_barf_with_message_for_any_repeater_and_row2()'><b>findElements_should_barf_with_message_for_any_repeater_and_row2</b><br>Test class: com.spring.hibernate.test.AngularAndWebDriverTest</td>
+<td></td>
+<td>0</td>
+<td>com.spring.hibernate.test.AngularAndWebDriverTest@56ac3a89</td></tr>
+<tr>
+<td title='com.spring.hibernate.test.AngularAndWebDriverTest.findElements_should_barf_with_message_for_any_repeater_and_row_and_column()'><b>findElements_should_barf_with_message_for_any_repeater_and_row_and_column</b><br>Test class: com.spring.hibernate.test.AngularAndWebDriverTest</td>
+<td></td>
+<td>0</td>
+<td>com.spring.hibernate.test.AngularAndWebDriverTest@56ac3a89</td></tr>
+<tr>
+<td title='com.spring.hibernate.test.AngularAndWebDriverTest.findElements_should_barf_with_message_for_bad_repeater_and_column()'><b>findElements_should_barf_with_message_for_bad_repeater_and_column</b><br>Test class: com.spring.hibernate.test.AngularAndWebDriverTest</td>
+<td></td>
+<td>0</td>
+<td>com.spring.hibernate.test.AngularAndWebDriverTest@56ac3a89</td></tr>
+<tr>
+<td title='com.spring.hibernate.test.AngularAndWebDriverTest.find_all_for_an_angular_binding()'><b>find_all_for_an_angular_binding</b><br>Test class: com.spring.hibernate.test.AngularAndWebDriverTest</td>
+<td></td>
+<td>0</td>
+<td>com.spring.hibernate.test.AngularAndWebDriverTest@56ac3a89</td></tr>
+<tr>
+<td title='com.spring.hibernate.test.AngularAndWebDriverTest.find_all_for_an_angular_options()'><b>find_all_for_an_angular_options</b><br>Test class: com.spring.hibernate.test.AngularAndWebDriverTest</td>
+<td></td>
+<td>1</td>
+<td>com.spring.hibernate.test.AngularAndWebDriverTest@56ac3a89</td></tr>
+<tr>
+<td title='com.spring.hibernate.test.AngularAndWebDriverTest.find_by_angular_binding()'><b>find_by_angular_binding</b><br>Test class: com.spring.hibernate.test.AngularAndWebDriverTest</td>
+<td></td>
+<td>0</td>
+<td>com.spring.hibernate.test.AngularAndWebDriverTest@56ac3a89</td></tr>
+<tr>
+<td title='com.spring.hibernate.test.AngularAndWebDriverTest.find_by_angular_buttonText()'><b>find_by_angular_buttonText</b><br>Test class: com.spring.hibernate.test.AngularAndWebDriverTest</td>
+<td></td>
+<td>0</td>
+<td>com.spring.hibernate.test.AngularAndWebDriverTest@56ac3a89</td></tr>
+<tr>
+<td title='com.spring.hibernate.test.AngularAndWebDriverTest.find_by_angular_cssContainingText()'><b>find_by_angular_cssContainingText</b><br>Test class: com.spring.hibernate.test.AngularAndWebDriverTest</td>
+<td></td>
+<td>0</td>
+<td>com.spring.hibernate.test.AngularAndWebDriverTest@56ac3a89</td></tr>
+<tr>
+<td title='com.spring.hibernate.test.AngularAndWebDriverTest.find_by_angular_model()'><b>find_by_angular_model</b><br>Test class: com.spring.hibernate.test.AngularAndWebDriverTest</td>
+<td></td>
+<td>1</td>
+<td>com.spring.hibernate.test.AngularAndWebDriverTest@56ac3a89</td></tr>
+<tr>
+<td title='com.spring.hibernate.test.AngularAndWebDriverTest.find_by_angular_partialButtonText()'><b>find_by_angular_partialButtonText</b><br>Test class: com.spring.hibernate.test.AngularAndWebDriverTest</td>
+<td></td>
+<td>0</td>
+<td>com.spring.hibernate.test.AngularAndWebDriverTest@56ac3a89</td></tr>
+<tr>
+<td title='com.spring.hibernate.test.AngularAndWebDriverTest.find_multiple_hits_for_ng_repeat_and_subset_to_first_matching_predicate_for_fluent_selenium_example()'><b>find_multiple_hits_for_ng_repeat_and_subset_to_first_matching_predicate_for_fluent_selenium_example</b><br>Test class: com.spring.hibernate.test.AngularAndWebDriverTest</td>
+<td></td>
+<td>1</td>
+<td>com.spring.hibernate.test.AngularAndWebDriverTest@56ac3a89</td></tr>
+<tr>
+<td title='com.spring.hibernate.test.AngularAndWebDriverTest.find_multiple_hits_for_ng_repeat_in_page()'><b>find_multiple_hits_for_ng_repeat_in_page</b><br>Test class: com.spring.hibernate.test.AngularAndWebDriverTest</td>
+<td></td>
+<td>0</td>
+<td>com.spring.hibernate.test.AngularAndWebDriverTest@56ac3a89</td></tr>
+<tr>
+<td title='com.spring.hibernate.test.AngularAndWebDriverTest.find_second_row_in_ng_repeat()'><b>find_second_row_in_ng_repeat</b><br>Test class: com.spring.hibernate.test.AngularAndWebDriverTest</td>
+<td></td>
+<td>1</td>
+<td>com.spring.hibernate.test.AngularAndWebDriverTest@56ac3a89</td></tr>
+<tr>
+<td title='com.spring.hibernate.test.AngularAndWebDriverTest.model_mutation_and_query_is_possible()'><b>model_mutation_and_query_is_possible</b><br>Test class: com.spring.hibernate.test.AngularAndWebDriverTest</td>
+<td></td>
+<td>1</td>
+<td>com.spring.hibernate.test.AngularAndWebDriverTest@56ac3a89</td></tr>
+<tr>
+<td title='com.spring.hibernate.test.AngularAndWebDriverTest.stress_test()'><b>stress_test</b><br>Test class: com.spring.hibernate.test.AngularAndWebDriverTest</td>
+<td></td>
+<td>8</td>
+<td>com.spring.hibernate.test.AngularAndWebDriverTest@56ac3a89</td></tr>
+</table><p>
+</body>
+</html>

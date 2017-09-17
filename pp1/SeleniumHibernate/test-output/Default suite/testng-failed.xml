@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
+  <test name="Default test(failed)">
+    <classes>
+      <class name="com.spring.hibernate.test.AngularAndWebDriverTest">
+        <methods>
+          <include name="basic_lib_getLocationAbsUrl_gets_url"/>
+          <include name="basic_locators_by_repeater_should_find_by_partial_match"/>
+          <include name="after_suite"/>
+          <include name="basic_locators_by_repeater_should_find_many_rows_by_partial_match"/>
+          <include name="resetBrowser"/>
+          <include name="basic_locators_by_repeater_should_find_many_rows_by_partial_match2"/>
+          <include name="basic_locators_by_repeater_should_find_one_row_by_partial_match"/>
+          <include name="basic_elements_chained_call_should_wait_to_grab_the_WebElement_until_a_method_is_called"/>
+          <include name="basic_elements_should_chain_with_index_correctly"/>
+          <include name="basic_actions"/>
+          <include name="basic_locators_by_repeater_should_find_single_rows_by_partial_match"/>
+          <include name="basic_elements_should_allow_using_repeater_locator_within_map"/>
+          <include name="before_suite"/>
+          <include name="altRoot_find_elements"/>
+        </methods>
+      </class> <!-- com.spring.hibernate.test.AngularAndWebDriverTest -->
+    </classes>
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->
