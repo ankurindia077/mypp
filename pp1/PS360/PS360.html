@@ -1,0 +1,334 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"[]>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>Test PS360 Feature</title>
+    <link rel="stylesheet" href="css/master.css" type="text/css" />
+    <link rel="stylesheet" href="css/print.css" type="text/css" media="print" />
+    <script src="js/jquery.js" type="text/javascript"></script>
+    <script src="js/scripts.js" type="text/javascript"></script>
+    <script type="text/javascript">
+$(document).ready(function() {
+  initializeToc();
+});
+</script>
+    <!-- We are using Font Awesome - http://fortawesome.github.com/Font-Awesome - licensed under CC BY 3.0 -->
+  </head>
+  <body>
+    <div id="container">
+      <div id="top" />
+      <div id="toc">
+        <p class="tocCollapser" title="Collapse Table of Content">«</p>
+        <ul class="features">
+          <li class="file" id="root">
+            <a href="index.html">Home</a>
+          </li>
+          <li class="file">
+            <span class="current">Test PS360 Feature</span>
+          </li>
+        </ul>
+      </div>
+      <div id="feature">
+        <h1>Test PS360 Feature</h1>
+        <ul id="scenarios">
+          <li class="scenario">
+            <div class="scenario-heading">
+              <h2></h2>
+            </div>
+            <div class="steps">
+              <ul>
+                <li class="step">
+                  <span class="keyword">Given </span>I sent a report to Powerscribe server using HL7 simulator</li>
+                <li class="step">
+                  <span class="keyword">And </span>I am logged in as 'Radiologist'</li>
+                <li class="step">
+                  <span class="keyword">And </span>Powerscribe client is launched and minimized</li>
+              </ul>
+            </div>
+          </li>
+          <li class="scenario">
+            <div class="scenario-heading" id="6738867389-verify-that-powerscribe-client-minimizes-when-study-is-minimized">
+              <h2>67388_67389 Verify that Powerscribe client minimizes when study is minimized</h2>
+              <p class="tags">Tags: <span>@backend_cpacs</span>, <span>@backend_iw</span>, <span>@monitor_single</span>, <span>@PRIORITY</span>, <span>@req_id_12174</span>, <span>@test_id_67388_67389</span>, <span>1</span></p>
+            </div>
+            <div class="steps">
+              <ul>
+                <li class="step">
+                  <span class="keyword">Given </span>I opened study for the Accession 'A12861#'</li>
+                <li class="step">
+                  <span class="keyword">And </span>I dictated the study</li>
+                <li class="step">
+                  <span class="keyword">And </span>Powerscribe client displayed the existing report</li>
+                <li class="step">
+                  <span class="keyword">And </span>I launched Patient Folder in restore mode</li>
+                <li class="step">
+                  <span class="keyword">When </span>I 'minimize' the study</li>
+                <li class="step">
+                  <span class="keyword">Then </span>Powerscribe client shall 'minimize'</li>
+              </ul>
+            </div>
+            <a class="scenario-link" href="javascript:showImageLink('6738867389-verify-that-powerscribe-client-minimizes-when-study-is-minimized')" title="Copy scenario link to clipboard.">
+              <i class="icon-link"> </i>
+            </a>
+          </li>
+          <li class="scenario">
+            <div class="scenario-heading" id="4543645437-verify-that-powerscribe360-client-logs-out-when-user-logs-out-of-uv">
+              <h2>45436_45437 Verify that Powerscribe360 client logs out when user logs out of UV.</h2>
+              <p class="tags">Tags: <span>@backend_cpacs</span>, <span>@backend_iw</span>, <span>@monitor_single</span>, <span>@PRIORITY</span>, <span>@req_id_12332_12335</span>, <span>@test_id_45436_45437</span>, <span>2</span></p>
+            </div>
+            <div class="steps">
+              <ul>
+                <li class="step">
+                  <span class="keyword">Given </span>I opened study for the Accession 'A45436#'</li>
+                <li class="step">
+                  <span class="keyword">And </span>I dictated the study</li>
+                <li class="step">
+                  <span class="keyword">And </span>Powerscribe client displayed the existing report with 'report text'</li>
+                <li class="step">
+                  <span class="keyword">When </span>I close the study</li>
+                <li class="step">
+                  <span class="keyword">And </span>log out of study list</li>
+                <li class="step">
+                  <span class="keyword">Then </span>Powerscribe client shall log out and 'close'.</li>
+              </ul>
+            </div>
+            <a class="scenario-link" href="javascript:showImageLink('4543645437-verify-that-powerscribe360-client-logs-out-when-user-logs-out-of-uv')" title="Copy scenario link to clipboard.">
+              <i class="icon-link"> </i>
+            </a>
+          </li>
+          <li class="scenario">
+            <div class="scenario-heading" id="12871-verify-that-study-is-dictated-when-report-is-saved-as-draft">
+              <h2>12871 _Verify that study is dictated when report is saved as Draft.</h2>
+              <p class="tags">Tags: <span>@backend_cpacs</span>, <span>@backend_iw</span>, <span>@monitor_single</span>, <span>@PRIORITY</span>, <span>@req_id_12175_12281_12173_12186_12233</span>, <span>@test_id_12871</span>, <span>3</span></p>
+            </div>
+            <div class="steps">
+              <ul>
+                <li class="step">
+                  <span class="keyword">Given </span>I opened study for the Accession 'A12871#'</li>
+                <li class="step">
+                  <span class="keyword">When </span>I dictate the study</li>
+                <li class="step">
+                  <span class="keyword">And </span>I create a draft with the text 'Draft created'</li>
+                <li class="step">
+                  <span class="keyword">Then </span>report shall be saved as 'Draft'</li>
+                <li class="step">
+                  <span class="keyword">And </span>Powerscribe client shall 'minimize'</li>
+                <li class="step">
+                  <span class="keyword">And </span>the study shall be marked as Dictated in the studylist</li>
+              </ul>
+            </div>
+            <a class="scenario-link" href="javascript:showImageLink('12871-verify-that-study-is-dictated-when-report-is-saved-as-draft')" title="Copy scenario link to clipboard.">
+              <i class="icon-link"> </i>
+            </a>
+          </li>
+          <li class="scenario">
+            <div class="scenario-heading" id="5699957003-verify-the-powerscribe-client-behaviour-on-study-launch-based-on-autolaunch-dictation-setting">
+              <h2>56999_57003 Verify the Powerscribe client behaviour on study launch based on Autolaunch Dictation setting</h2>
+              <p class="tags">Tags: <span>@backend_cpacs</span>, <span>@backend_iw</span>, <span>@monitor_single</span>, <span>@PRIORITY</span>, <span>@req_id_41838_42011_42014</span>, <span>@test_id_56999_57003</span>, <span>4</span></p>
+            </div>
+            <div class="steps">
+              <ul>
+                <li class="step">
+                  <span class="keyword">Given </span>I '&lt;enabled_option&gt;' Autolaunch Dictation</li>
+                <li class="step">
+                  <span class="keyword">When </span>I open study for the Accession 'A56999#'</li>
+                <li class="step">
+                  <span class="keyword">Then </span>Powerscribe client shall '&lt;launch_behavior&gt;' with the report section for the 'A56999#'</li>
+              </ul>
+            </div>
+            <a class="scenario-link" href="javascript:showImageLink('5699957003-verify-the-powerscribe-client-behaviour-on-study-launch-based-on-autolaunch-dictation-setting')" title="Copy scenario link to clipboard.">
+              <i class="icon-link"> </i>
+            </a>
+            <div>
+              <div class="examples">
+                <h3>Examples: </h3>
+                <div class="table_container">
+                  <table class="datatable">
+                    <thead>
+                      <tr>
+                        <th>Enabled_option</th>
+                        <th>launch_behavior</th>
+                        <th> </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Enable</td>
+                        <td>Launch</td>
+                        <td />
+                      </tr>
+                      <tr>
+                        <td>Disable</td>
+                        <td>Not launch</td>
+                        <td />
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="scenario">
+            <div class="scenario-heading" id="57004-verify-that-when-autolaunch-dictation-is-un--checked-powerscribe-will-launch-only-on-dictating-the-study">
+              <h2>57004 Verify that when Autolaunch Dictation is un- checked Powerscribe will launch only on dictating the study</h2>
+              <p class="tags">Tags: <span>@backend_cpacs</span>, <span>@backend_iw</span>, <span>@monitor_single</span>, <span>@PRIORITY</span>, <span>@req_id_41838_42011_42014</span>, <span>@test_id_57004</span>, <span>5</span></p>
+            </div>
+            <div class="steps">
+              <ul>
+                <li class="step">
+                  <span class="keyword">Given </span>I disabled 'Autolaunch Dictation'</li>
+                <li class="step">
+                  <span class="keyword">When </span>I open study for the Accession 'A57004#'</li>
+                <li class="step">
+                  <span class="keyword">And </span>I dictate the study</li>
+                <li class="step">
+                  <span class="keyword">Then </span>Powerscribe client shall be launched with the report section for the 'A57004#'</li>
+              </ul>
+            </div>
+            <a class="scenario-link" href="javascript:showImageLink('57004-verify-that-when-autolaunch-dictation-is-un--checked-powerscribe-will-launch-only-on-dictating-the-study')" title="Copy scenario link to clipboard.">
+              <i class="icon-link"> </i>
+            </a>
+          </li>
+          <li class="scenario">
+            <div class="scenario-heading" id="12862-verify-that-powerscribe-creates-a-temporary-order-if-report-is-not-available-in-powerscribe">
+              <h2>12862 Verify that Powerscribe creates a temporary order if report is not available in Powerscribe.</h2>
+              <p class="tags">Tags: <span>@backend_cpacs</span>, <span>@backend_iw</span>, <span>@monitor_single</span>, <span>@PRIORITY</span>, <span>@req_id_12174_12232_12173_12186</span>, <span>@test_id_12862</span>, <span>6</span></p>
+            </div>
+            <div class="steps">
+              <ul>
+                <li class="step">
+                  <span class="keyword">Given </span>I opened study absent in PS worklist for the Accession 'A12862#'</li>
+                <li class="step">
+                  <span class="keyword">And </span>I dictated the study</li>
+                <li class="step">
+                  <span class="keyword">When </span>I confirm creation of temporary order</li>
+                <li class="step">
+                  <span class="keyword">And </span>I create and save the report with text 'Temporary order'</li>
+                <li class="step">
+                  <span class="keyword">Then </span>Powerscribe client shall display the report status as 'Draft'.</li>
+                <li class="step">
+                  <span class="keyword">And </span>Draft section count shall be '1'</li>
+              </ul>
+            </div>
+            <a class="scenario-link" href="javascript:showImageLink('12862-verify-that-powerscribe-creates-a-temporary-order-if-report-is-not-available-in-powerscribe')" title="Copy scenario link to clipboard.">
+              <i class="icon-link"> </i>
+            </a>
+          </li>
+          <li class="scenario">
+            <div class="scenario-heading" id="57005-verify-auto-close-of-viewer-on-ps-report-signoff-when-close-viewer-on-signoff-is-checked">
+              <h2>57005 Verify Auto Close of Viewer on PS report signoff when Close Viewer on signoff is Checked</h2>
+              <p class="tags">Tags: <span>@backend_cpacs</span>, <span>@backend_iw</span>, <span>@monitor_single</span>, <span>@PRIORITY</span>, <span>@req_id_41838_41839_42011_42014_42013</span>, <span>@test_id_57005</span>, <span>7</span></p>
+            </div>
+            <div class="steps">
+              <ul>
+                <li class="step">
+                  <span class="keyword">Given </span>I 'enable' Autolaunch Dictation</li>
+                <li class="step">
+                  <span class="keyword">And </span>I 'enable' Closer Viewer on Signoff</li>
+                <li class="step">
+                  <span class="keyword">When </span>I open study for the Accession 'A57005#'</li>
+                <li class="step">
+                  <span class="keyword">And </span>Powerscribe client is launched with the report section for the 'A57005#'</li>
+                <li class="step">
+                  <span class="keyword">And </span>I create and sign the report with text ' Report created'</li>
+                <li class="step">
+                  <span class="keyword">And </span>provide the password for the user</li>
+                <li class="step">
+                  <span class="keyword">Then </span>the study will close after the signing the report</li>
+                <li class="step">
+                  <span class="keyword">And </span>Powerscribe client shall 'minimize'.</li>
+              </ul>
+            </div>
+            <a class="scenario-link" href="javascript:showImageLink('57005-verify-auto-close-of-viewer-on-ps-report-signoff-when-close-viewer-on-signoff-is-checked')" title="Copy scenario link to clipboard.">
+              <i class="icon-link"> </i>
+            </a>
+          </li>
+          <li class="scenario">
+            <div class="scenario-heading" id="57007-verify-viewer-does-not-close-on-discard-of-ps-report-when-close-viewer-on-signoff-is-checked">
+              <h2>57007 Verify Viewer does not close on Discard of PS report when Close viewer on Signoff  is Checked</h2>
+              <p class="tags">Tags: <span>@backend_cpacs</span>, <span>@backend_iw</span>, <span>@monitor_single</span>, <span>@PRIORITY</span>, <span>@req_id_41838_41839_42011_42014_42013</span>, <span>@test_id_57007</span>, <span>8</span></p>
+            </div>
+            <div class="steps">
+              <ul>
+                <li class="step">
+                  <span class="keyword">Given </span>I 'enable' Autolaunch Dictation</li>
+                <li class="step">
+                  <span class="keyword">And </span>I 'enable' Closer Viewer on Signoff</li>
+                <li class="step">
+                  <span class="keyword">When </span>I open study for the Accession 'A57007#'</li>
+                <li class="step">
+                  <span class="keyword">And </span>I 'create and discard' the report with text 'Sign Report'</li>
+                <li class="step">
+                  <span class="keyword">Then </span>I shall be able to discard the report on accepting the delete message</li>
+                <li class="step">
+                  <span class="keyword">And </span>Powerscribe client shall 'minimize'</li>
+                <li class="step">
+                  <span class="keyword">And </span>the study shall not close</li>
+              </ul>
+            </div>
+            <a class="scenario-link" href="javascript:showImageLink('57007-verify-viewer-does-not-close-on-discard-of-ps-report-when-close-viewer-on-signoff-is-checked')" title="Copy scenario link to clipboard.">
+              <i class="icon-link"> </i>
+            </a>
+          </li>
+          <li class="scenario">
+            <div class="scenario-heading" id="57006-verify-closing-of-viewer-on-signoff-of-ps-report-for-a-study-launched-through-dictate-icon-when-close-viewer-on-signoff-is-checked">
+              <h2>57006 Verify Closing of viewer on Signoff of PS report for a study launched through Dictate icon, when Close Viewer on Signoff is Checked</h2>
+              <p class="tags">Tags: <span>@backend_cpacs</span>, <span>@backend_iw</span>, <span>@monitor_single</span>, <span>@PRIORITY</span>, <span>@req_id_41838_41839_42011_42014_42013</span>, <span>@test_id_57006</span>, <span>9</span></p>
+            </div>
+            <div class="steps">
+              <ul>
+                <li class="step">
+                  <span class="keyword">Given </span>I 'disable' Autolaunch Dictation</li>
+                <li class="step">
+                  <span class="keyword">And </span>I 'enable' Close Viewer on Signoff</li>
+                <li class="step">
+                  <span class="keyword">And </span>I opened study for the Accession 'A57006#'</li>
+                <li class="step">
+                  <span class="keyword">When </span>I dictate the study</li>
+                <li class="step">
+                  <span class="keyword">And </span>I 'create and sign' the report with text ' Report created'</li>
+                <li class="step">
+                  <span class="keyword">And </span>provide the password for the user</li>
+                <li class="step">
+                  <span class="keyword">Then </span>the study will close after the signing the report.</li>
+              </ul>
+            </div>
+            <a class="scenario-link" href="javascript:showImageLink('57006-verify-closing-of-viewer-on-signoff-of-ps-report-for-a-study-launched-through-dictate-icon-when-close-viewer-on-signoff-is-checked')" title="Copy scenario link to clipboard.">
+              <i class="icon-link"> </i>
+            </a>
+          </li>
+          <li class="scenario">
+            <div class="scenario-heading" id="57008-verify-viewer-is-not-closed-on-signing-report-as-preliminary-in-ps-when-close-viewer-on-signoff-is-checked">
+              <h2>57008 Verify Viewer is not closed on signing report as preliminary in PS when Close viewer on Signoff  is Checked</h2>
+              <p class="tags">Tags: <span>@backend_cpacs</span>, <span>@backend_iw</span>, <span>@monitor_single</span>, <span>@PRIORITY</span>, <span>@req_id_41838_41839_42011_42014_42013</span>, <span>@test_id_57008</span>, <span>10</span></p>
+            </div>
+            <div class="steps">
+              <ul>
+                <li class="step">
+                  <span class="keyword">Given </span>I 'enable' Autolaunch Dictation</li>
+                <li class="step">
+                  <span class="keyword">And </span>I 'enable' Closer Viewer on Signoff</li>
+                <li class="step">
+                  <span class="keyword">When </span>I open study for the Accession 'A57008#'</li>
+                <li class="step">
+                  <span class="keyword">And </span>I create and sign the report as Preliminary with text ' Preliminary report created'</li>
+                <li class="step">
+                  <span class="keyword">Then </span>Powerscribe client shall 'minimize'</li>
+                <li class="step">
+                  <span class="keyword">And </span>the study shall not close</li>
+              </ul>
+            </div>
+            <a class="scenario-link" href="javascript:showImageLink('57008-verify-viewer-is-not-closed-on-signing-report-as-preliminary-in-ps-when-close-viewer-on-signoff-is-checked')" title="Copy scenario link to clipboard.">
+              <i class="icon-link"> </i>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div id="footer">
+        <p>Test results generated for: Universal Viewer Test Automation, version 1.1</p>
+        <p>Generated on: 4 January 2017 21:41:30</p>
+        <p>Produced by Pickles, version 2.11.1.0</p>
+      </div>
+    </div>
+  </body>
+</html>
